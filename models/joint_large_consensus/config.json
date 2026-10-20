@@ -1,0 +1,20 @@
+{
+  "output_dir": "../experiments/asa24_external/runs/joint_large_consensus",
+  "domains": "n5k,asa24",
+  "pool": "asa24_train_pool_consensus.csv",
+  "pad43": "False",
+  "qwen": "False",
+  "domain_flag": "False",
+  "text_features": "False",
+  "asa_weight": "1.0",
+  "aux_weight": "1.0",
+  "mass_weight_power": "0.0",
+  "epochs": "15",
+  "batch_size": "16",
+  "backbone_lr": "2e-05",
+  "head_lr": "0.001",
+  "seed": "20261004",
+  "folds": "5",
+  "workers": "16",
+  "backbone": "/home/lian/models/dinov2-large"
+}

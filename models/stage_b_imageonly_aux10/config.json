@@ -1,0 +1,18 @@
+{
+  "output_dir": "../experiments/qwen3vl_journal_v2_training/stage_b_imageonly_aux10",
+  "epochs": "15",
+  "batch_size": "16",
+  "backbone_lr": "2e-05",
+  "head_lr": "0.001",
+  "aux_weight": "1.0",
+  "target": "log_mass",
+  "folds": "5",
+  "only_folds": "",
+  "seed": "20261004",
+  "device": "cuda",
+  "smoke": "False",
+  "no_ingredients": "False",
+  "zero_side": "qwen,conf,count,ingr",
+  "workers": "16",
+  "save_checkpoints": "True"
+}
