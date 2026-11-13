@@ -1,0 +1,371 @@
+{
+  "scope": "Retrospective paired uncertainty summaries requested for main-text reporting; saved predictions only.",
+  "bootstrap": {
+    "resamples": 10000,
+    "seed_per_comparison": 0,
+    "method": "paired percentile; entire groups with replacement; photograph-weighted MAE; fixed predictions"
+  },
+  "comparisons": {
+    "base_vs_qwen_asa24": {
+      "first": "base_n5k",
+      "second": "qwen",
+      "dataset": "asa24",
+      "n_photographs": 1000,
+      "n_groups": 162,
+      "group_column": "series",
+      "mae_g": {
+        "base_n5k": 67.905422171,
+        "qwen": 72.92971204
+      },
+      "difference_g": -5.024289869,
+      "ci95_g": [
+        -13.017103582392268,
+        2.93257183739023
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/asa24_external/asa24_aerial_sample.csv",
+          "sha256": "b4a3ba66591a2a6d609fe971652f6a88dc4efbcda19d3bd08d586a19577d444d"
+        },
+        "base_n5k": {
+          "path": "../experiments/asa24_external/finetuned_stage_b_imageonly_aux10.csv",
+          "sha256": "15758f749283de37431d59b85fd643c11113e17704b341b8f5a31de888557c69"
+        },
+        "qwen": {
+          "path": "../experiments/asa24_external/qwen_blind_fp8_lenient.csv",
+          "sha256": "431ae7cabb95fc1f17ab17c08068c6986beeca4f927f1f9eec6b23b2ac8b2209"
+        }
+      }
+    },
+    "base_vs_qwen_ecustfd_top": {
+      "first": "base_n5k",
+      "second": "qwen",
+      "dataset": "ecustfd_top",
+      "n_photographs": 1429,
+      "n_groups": 146,
+      "group_column": "id",
+      "mae_g": {
+        "base_n5k": 44.7021537676697,
+        "qwen": 40.545136459062284
+      },
+      "difference_g": 4.157017308607418,
+      "ci95_g": [
+        -2.298851330986757,
+        10.66469929459867
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/external_ecustfd/ecustfd_top_sample.csv",
+          "sha256": "e34e08f8aa1e7a528206beeb1fe8ed4f5ed2e79699ece88c3498803a216f958b"
+        },
+        "base_n5k": {
+          "path": "../experiments/external_ecustfd/pred_n5k_imageonly.csv",
+          "sha256": "81d3539284493c14ab3afa1b4980e00f3249ee92ea624eb69e7ed41ba3402dd8"
+        },
+        "qwen": {
+          "path": "../experiments/external_ecustfd/qwen_blind_fp8.csv",
+          "sha256": "44d73f6d80c9456c64501aa2d744c7c2beb3fe11b5b10c69ae5ca7d25926c8fe"
+        }
+      }
+    },
+    "base_vs_qwen_ecustfd_side": {
+      "first": "base_n5k",
+      "second": "qwen",
+      "dataset": "ecustfd_side",
+      "n_photographs": 1441,
+      "n_groups": 146,
+      "group_column": "id",
+      "mae_g": {
+        "base_n5k": 55.001134485773754,
+        "qwen": 40.24857737682165
+      },
+      "difference_g": 14.752557108952118,
+      "ci95_g": [
+        6.23721436812162,
+        23.324399583927896
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/ecustfd_side_view/ecustfd_side_sample.csv",
+          "sha256": "4cc03fcefb6ee1842dd1757c7c5b7e22512beb85f251532dcec701e6031dc624"
+        },
+        "base_n5k": {
+          "path": "../experiments/ecustfd_side_view/pred_n5k_imageonly.csv",
+          "sha256": "abd949341c90751f7a4aab2e7c9f7f20d0e0caaa420ca8d9dd862b4b849c4955"
+        },
+        "qwen": {
+          "path": "../experiments/ecustfd_side_view/qwen_blind_fp8.csv",
+          "sha256": "862a03e8cc605f694fd57432589e9d22f2ff8285b338bfbc825a14ac74056546"
+        }
+      }
+    },
+    "base_vs_qwen_fpb": {
+      "first": "base_n5k",
+      "second": "qwen",
+      "dataset": "fpb",
+      "n_photographs": 2034,
+      "n_groups": 411,
+      "group_column": "portion",
+      "mae_g": {
+        "base_n5k": 467.53402050147486,
+        "qwen": 248.51843657866274
+      },
+      "difference_g": 219.0155839228122,
+      "ci95_g": [
+        199.37771007681508,
+        239.19886389196844
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/external_fpb/fpb_val_eval.csv",
+          "sha256": "3a9a071521702e23aea6e5d0a1280351107cf2ba9fd8b0bc66df4f0dbc1713d5"
+        },
+        "training_tray_exclusion": {
+          "path": "../experiments/external_fpb/fpb_train.csv",
+          "sha256": "2b1401a2de602485df71a91d08b12eabb61a7d93b88ff3ff1634cbc694b02dce"
+        },
+        "base_n5k": {
+          "path": "../experiments/external_fpb/pred_n5k_imageonly.csv",
+          "sha256": "13d0e20eaaf2b1a25daaab3c37ed34f8a8e9590034fc29b8329edccce8bf98f8"
+        },
+        "qwen": {
+          "path": "../experiments/external_fpb/qwen_blind_fp8.csv",
+          "sha256": "874b9c4f503c4419b6fff84962815be8042e2318e42ed6fd58a01b47c47dd771"
+        },
+        "fpb_fallback_pool": {
+          "path": "../experiments/external_fpb/fpb_train_1024.csv",
+          "sha256": "4f31989e86d36de6e30daae35cf9a564bbf63368393cff72bd070c5d35a73275"
+        },
+        "fpb_response_parser": {
+          "path": "evaluate_fpb.py",
+          "sha256": "992e6856c870a85d3f9e6b36794d050466c0768e1c33befe3ef2305a272de621"
+        },
+        "original_fpb_result": {
+          "path": "../experiments/external_fpb/fpb_results.json",
+          "sha256": "52af3095160840ae7e48f5632d8a6143fb58bfaa02ab9a26cc6850bab6867844"
+        }
+      }
+    },
+    "base_vs_qwen_nvr": {
+      "first": "base_n5k",
+      "second": "qwen",
+      "dataset": "nvr",
+      "n_photographs": 889,
+      "n_groups": 225,
+      "group_column": "dish_group",
+      "mae_g": {
+        "base_n5k": 300.67154154949384,
+        "qwen": 171.75815523059617
+      },
+      "difference_g": 128.91338631889766,
+      "ci95_g": [
+        117.78070377922656,
+        140.2772738718693
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/nutritionverse_real/nvr_sample.csv",
+          "sha256": "b7ba465292a9523c529440bad90c067bcbe42c1242851ee5eb65b98a51413c18"
+        },
+        "base_n5k": {
+          "path": "../experiments/nutritionverse_real/pred_n5k_imageonly.csv",
+          "sha256": "faa4a25f6ece4b45bea66df89cb591103372c2066763d1c81aebf179563e08ff"
+        },
+        "qwen": {
+          "path": "../experiments/nutritionverse_real/qwen_blind_fp8.csv",
+          "sha256": "ba04cf2abdf243836750870571502409849383458640fce49470e061ad447a6a"
+        }
+      }
+    },
+    "added_asa24_base": {
+      "first": "base_n5k_asa24",
+      "second": "base_n5k",
+      "dataset": "asa24",
+      "n_photographs": 1000,
+      "n_groups": 162,
+      "group_column": "series",
+      "mae_g": {
+        "base_n5k_asa24": 45.8129026485,
+        "base_n5k": 67.905422171
+      },
+      "difference_g": -22.0925195225,
+      "ci95_g": [
+        -30.04706853085277,
+        -14.217370561410469
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/asa24_external/asa24_aerial_sample.csv",
+          "sha256": "b4a3ba66591a2a6d609fe971652f6a88dc4efbcda19d3bd08d586a19577d444d"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/asa24_external/runs/joint_base_stretch/asa24_test_predictions.csv",
+          "sha256": "648c00e7e13c4076af32b18e0acebfea08b25836600423e79806135df9b9cfed"
+        },
+        "base_n5k": {
+          "path": "../experiments/asa24_external/finetuned_stage_b_imageonly_aux10.csv",
+          "sha256": "15758f749283de37431d59b85fd643c11113e17704b341b8f5a31de888557c69"
+        }
+      }
+    },
+    "three_vs_two_base_asa24": {
+      "first": "base_n5k_asa24_fpb",
+      "second": "base_n5k_asa24",
+      "dataset": "asa24",
+      "n_photographs": 1000,
+      "n_groups": 162,
+      "group_column": "series",
+      "mae_g": {
+        "base_n5k_asa24_fpb": 47.0947240705,
+        "base_n5k_asa24": 45.8129026485
+      },
+      "difference_g": 1.2818214220000004,
+      "ci95_g": [
+        -1.1153243144492648,
+        3.7248257290126907
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/asa24_external/asa24_aerial_sample.csv",
+          "sha256": "b4a3ba66591a2a6d609fe971652f6a88dc4efbcda19d3bd08d586a19577d444d"
+        },
+        "base_n5k_asa24_fpb": {
+          "path": "../experiments/asa24_external/runs/joint3_base/asa24_test_predictions.csv",
+          "sha256": "9db6992cb37af8380a37746096d37c5f6852da30f80ba655747e93fe7f2afe69"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/asa24_external/runs/joint_base_stretch/asa24_test_predictions.csv",
+          "sha256": "648c00e7e13c4076af32b18e0acebfea08b25836600423e79806135df9b9cfed"
+        }
+      }
+    },
+    "three_vs_two_base_ecustfd_top": {
+      "first": "base_n5k_asa24_fpb",
+      "second": "base_n5k_asa24",
+      "dataset": "ecustfd_top",
+      "n_photographs": 1429,
+      "n_groups": 146,
+      "group_column": "id",
+      "mae_g": {
+        "base_n5k_asa24_fpb": 58.35865199090273,
+        "base_n5k_asa24": 40.96920512386284
+      },
+      "difference_g": 17.389446867039887,
+      "ci95_g": [
+        9.413859288242536,
+        24.972828898225508
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/external_ecustfd/ecustfd_top_sample.csv",
+          "sha256": "e34e08f8aa1e7a528206beeb1fe8ed4f5ed2e79699ece88c3498803a216f958b"
+        },
+        "base_n5k_asa24_fpb": {
+          "path": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_fpb_ecustfd_top.csv",
+          "sha256": "00be53441fcd60f3cda3bf8646075eb10913340e36b660e145a0dd558bfb5603"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/external_ecustfd/pred_joint_base_stretch.csv",
+          "sha256": "961cdc6bc04fa7fb6794d7bc20fbb745ee56c1b264eb392109e97ca50e494f92"
+        }
+      }
+    },
+    "three_vs_two_base_ecustfd_side": {
+      "first": "base_n5k_asa24_fpb",
+      "second": "base_n5k_asa24",
+      "dataset": "ecustfd_side",
+      "n_photographs": 1441,
+      "n_groups": 146,
+      "group_column": "id",
+      "mae_g": {
+        "base_n5k_asa24_fpb": 127.97032424843859,
+        "base_n5k_asa24": 52.663566110340035
+      },
+      "difference_g": 75.30675813809854,
+      "ci95_g": [
+        57.88496792746302,
+        92.65836739058317
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/ecustfd_side_view/ecustfd_side_sample.csv",
+          "sha256": "4cc03fcefb6ee1842dd1757c7c5b7e22512beb85f251532dcec701e6031dc624"
+        },
+        "base_n5k_asa24_fpb": {
+          "path": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_fpb_ecustfd_side.csv",
+          "sha256": "35d4a4002d03a5aeceda74168173c1ea9c0d5e322931497cf61c73d3f0a605a2"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_ecustfd_side.csv",
+          "sha256": "9f3c22d7661e4f23c31c64c91066fda67ed0538bd99a0856221f504ca8a5cd13"
+        }
+      }
+    },
+    "three_vs_two_base_fpb": {
+      "first": "base_n5k_asa24_fpb",
+      "second": "base_n5k_asa24",
+      "dataset": "fpb",
+      "n_photographs": 2034,
+      "n_groups": 411,
+      "group_column": "portion",
+      "mae_g": {
+        "base_n5k_asa24_fpb": 161.69480883677485,
+        "base_n5k_asa24": 463.46585653490655
+      },
+      "difference_g": -301.7710476981318,
+      "ci95_g": [
+        -328.6695166771408,
+        -276.4410940289158
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/external_fpb/fpb_val_eval.csv",
+          "sha256": "3a9a071521702e23aea6e5d0a1280351107cf2ba9fd8b0bc66df4f0dbc1713d5"
+        },
+        "training_tray_exclusion": {
+          "path": "../experiments/external_fpb/fpb_train.csv",
+          "sha256": "2b1401a2de602485df71a91d08b12eabb61a7d93b88ff3ff1634cbc694b02dce"
+        },
+        "base_n5k_asa24_fpb": {
+          "path": "../experiments/asa24_external/runs/joint3_base/fpb_val_predictions.csv",
+          "sha256": "a55c3d39764e4c2191cc45eae9bb237e8f7ed0637b7dcdfde017c59c32e517ff"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/external_fpb/pred_joint_base_stretch.csv",
+          "sha256": "064a795250762547380ea42e78c72b42bb43df73789ba61579486412ccc4b948"
+        }
+      }
+    },
+    "three_vs_two_base_nvr": {
+      "first": "base_n5k_asa24_fpb",
+      "second": "base_n5k_asa24",
+      "dataset": "nvr",
+      "n_photographs": 889,
+      "n_groups": 225,
+      "group_column": "dish_group",
+      "mae_g": {
+        "base_n5k_asa24_fpb": 202.0587955736783,
+        "base_n5k_asa24": 305.0474466197976
+      },
+      "difference_g": -102.98865104611924,
+      "ci95_g": [
+        -111.7861684152419,
+        -94.29855044144921
+      ],
+      "inputs": {
+        "sample": {
+          "path": "../experiments/nutritionverse_real/nvr_sample.csv",
+          "sha256": "b7ba465292a9523c529440bad90c067bcbe42c1242851ee5eb65b98a51413c18"
+        },
+        "base_n5k_asa24_fpb": {
+          "path": "../experiments/nutritionverse_real/pred_joint3_base.csv",
+          "sha256": "e324cddc0200af3a57f66d4ff13cafe24912dd05fd0ee9c1d5b6d118af0c62f7"
+        },
+        "base_n5k_asa24": {
+          "path": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_nvr.csv",
+          "sha256": "6d14ddb87cb1a3c609f6aad79a4adfd3ddc376b072e196083b40334da4fe68a5"
+        }
+      }
+    }
+  }
+}

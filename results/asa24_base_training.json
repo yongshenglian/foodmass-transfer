@@ -1,0 +1,36 @@
+{
+  "comparison": "DINOv2-base trained on Nutrition5k plus strict ASA24 versus Nutrition5k alone",
+  "n_photographs": 1000,
+  "n_food_series": 162,
+  "mae_g": {
+    "nutrition5k_only": 67.905422171,
+    "nutrition5k_plus_asa24": 45.8129026485
+  },
+  "added_asa24_minus_nutrition5k_only_g": {
+    "difference": -22.0925195225,
+    "ci95": [
+      -30.04706853085277,
+      -14.217370561410469
+    ]
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 0,
+    "unit": "food series",
+    "method": "paired percentile; fixed predictions; photograph-weighted MAE"
+  },
+  "inputs": {
+    "test": {
+      "file": "../experiments/asa24_external/asa24_aerial_sample.csv",
+      "sha256": "b4a3ba66591a2a6d609fe971652f6a88dc4efbcda19d3bd08d586a19577d444d"
+    },
+    "nutrition5k_only": {
+      "file": "../experiments/asa24_external/finetuned_stage_b_imageonly_aux10.csv",
+      "sha256": "15758f749283de37431d59b85fd643c11113e17704b341b8f5a31de888557c69"
+    },
+    "nutrition5k_plus_asa24": {
+      "file": "../experiments/asa24_external/runs/joint_base_stretch/asa24_test_predictions.csv",
+      "sha256": "648c00e7e13c4076af32b18e0acebfea08b25836600423e79806135df9b9cfed"
+    }
+  }
+}

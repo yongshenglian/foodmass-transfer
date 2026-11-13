@@ -88,6 +88,8 @@ def train_fold(train, args, seed):
     if args.mass_weight_power:  # tilt the log-space loss toward heavier dishes, closer to a grams MAE objective
         w = w * (train.true.to_numpy(float) / np.median(train.true)) ** args.mass_weight_power
     net = Net(sd.shape[1]).to("cuda")
+    if args.grad_checkpoint:  # recompute activations in the backward pass: same results, less memory, slower
+        net.backbone.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     head = [p for n, p in net.named_parameters() if not n.startswith("backbone")]
     opt = torch.optim.AdamW([{"params": net.backbone.parameters(), "lr": args.backbone_lr},
                              {"params": head, "lr": args.head_lr}], weight_decay=0.05)
@@ -131,7 +133,10 @@ def main():
     p.add_argument("--seed", type=int, default=20261004)
     p.add_argument("--folds", type=int, default=5)
     p.add_argument("--workers", type=int, default=16)
+    p.add_argument("--preprocess", choices=["stretch", "pad"], default="stretch", help="see finetune_dinov2_mass.PREPROC")
+    p.add_argument("--grad-checkpoint", action="store_true", help="gradient checkpointing in the backbone (memory only)")
     args = p.parse_args()
+    ft.PREPROC = args.preprocess
     args.output_dir.mkdir(parents=True, exist_ok=True)
     (args.output_dir / "config.json").write_text(json.dumps({**{k: str(v) for k, v in vars(args).items()}, "backbone": ft.MODEL}, indent=2))
     ft.POOL = ThreadPoolExecutor(args.workers)

@@ -1,0 +1,184 @@
+{
+  "Nutrition5k validation": {
+    "n": 502,
+    "energy_density_kcal_per_g": {
+      "median": 1.1908030944279737,
+      "p5": 0.32999999999999996,
+      "p95": 4.660999820514781
+    },
+    "models": {
+      "Qwen, single prompt": {
+        "mae_g": 60.34860557768924,
+        "median_relative_error_pct": 26.76056338028169,
+        "within_20pct": 37.25099601593625,
+        "energy_mae_kcal": 78.87332134725223,
+        "energy_error_100kcal_or_more_pct": 26.89243027888446,
+        "by_energy_density": {
+          "low (0.18-0.92 kcal/g)": {
+            "n": 168,
+            "mae_g": 70.4047619047619,
+            "median_relative_error_pct": 28.801843317972352,
+            "energy_mae_kcal": 39.745271540953766
+          },
+          "middle (0.92-1.47 kcal/g)": {
+            "n": 167,
+            "mae_g": 57.26946107784431,
+            "median_relative_error_pct": 23.91304347826087,
+            "energy_mae_kcal": 69.20676361593969
+          },
+          "high (1.47-5.78 kcal/g)": {
+            "n": 167,
+            "mae_g": 53.31137724550898,
+            "median_relative_error_pct": 27.906976744186046,
+            "energy_mae_kcal": 127.90222858430215
+          }
+        }
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "mae_g": 24.778369511952192,
+        "median_relative_error_pct": 11.348327598184198,
+        "within_20pct": 78.48605577689243,
+        "energy_mae_kcal": 35.74338141355158,
+        "energy_error_100kcal_or_more_pct": 5.9760956175298805,
+        "by_energy_density": {
+          "low (0.18-0.92 kcal/g)": {
+            "n": 168,
+            "mae_g": 21.872426928571425,
+            "median_relative_error_pct": 11.611993103254141,
+            "energy_mae_kcal": 12.891920673087487
+          },
+          "middle (0.92-1.47 kcal/g)": {
+            "n": 167,
+            "mae_g": 27.856338700598805,
+            "median_relative_error_pct": 11.612975000000002,
+            "energy_mae_kcal": 33.54570700157273
+          },
+          "high (1.47-5.78 kcal/g)": {
+            "n": 167,
+            "mae_g": 24.623743760479044,
+            "median_relative_error_pct": 10.864132653061224,
+            "energy_mae_kcal": 60.92935166024883
+          }
+        }
+      },
+      "DINOv2-large, multi-domain": {
+        "mae_g": 23.285511354581672,
+        "median_relative_error_pct": 10.218161297578348,
+        "within_20pct": 80.2788844621514,
+        "energy_mae_kcal": 33.01799358168186,
+        "energy_error_100kcal_or_more_pct": 3.9840637450199203,
+        "by_energy_density": {
+          "low (0.18-0.92 kcal/g)": {
+            "n": 168,
+            "mae_g": 21.988614422619047,
+            "median_relative_error_pct": 11.879501951306837,
+            "energy_mae_kcal": 12.947234490366663
+          },
+          "middle (0.92-1.47 kcal/g)": {
+            "n": 167,
+            "mae_g": 26.663998155688624,
+            "median_relative_error_pct": 10.6540251572327,
+            "energy_mae_kcal": 32.09170597456504
+          },
+          "high (1.47-5.78 kcal/g)": {
+            "n": 167,
+            "mae_g": 21.21168733532934,
+            "median_relative_error_pct": 7.884898148148155,
+            "energy_mae_kcal": 54.13522446628941
+          }
+        }
+      }
+    }
+  },
+  "ASA24 test": {
+    "n": 1000,
+    "energy_density_kcal_per_g": {
+      "median": 1.9200000000000002,
+      "p5": 0.32,
+      "p95": 5.22
+    },
+    "models": {
+      "Qwen, single prompt": {
+        "mae_g": 72.92971204,
+        "median_relative_error_pct": 44.44444444444444,
+        "within_20pct": 20.4,
+        "energy_mae_kcal": 126.33845191570575,
+        "energy_error_100kcal_or_more_pct": 35.699999999999996,
+        "by_energy_density": {
+          "low (0.12-1.09 kcal/g)": {
+            "n": 336,
+            "mae_g": 91.83848958333333,
+            "median_relative_error_pct": 43.4745217877748,
+            "energy_mae_kcal": 64.14987466526925
+          },
+          "middle (1.09-2.57 kcal/g)": {
+            "n": 333,
+            "mae_g": 82.91630810810811,
+            "median_relative_error_pct": 43.19526627218935,
+            "energy_mae_kcal": 158.71538491790648
+          },
+          "high (2.57-7.16 kcal/g)": {
+            "n": 331,
+            "mae_g": 43.68836537764351,
+            "median_relative_error_pct": 47.089947089947096,
+            "energy_mae_kcal": 156.89386963901035
+          }
+        }
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "mae_g": 67.905422171,
+        "median_relative_error_pct": 39.62200925217391,
+        "within_20pct": 21.8,
+        "energy_mae_kcal": 123.40875843355566,
+        "energy_error_100kcal_or_more_pct": 36.199999999999996,
+        "by_energy_density": {
+          "low (0.12-1.09 kcal/g)": {
+            "n": 336,
+            "mae_g": 84.8377062514881,
+            "median_relative_error_pct": 38.41414496847415,
+            "energy_mae_kcal": 57.85569305149158
+          },
+          "middle (1.09-2.57 kcal/g)": {
+            "n": 333,
+            "mae_g": 68.11142925075076,
+            "median_relative_error_pct": 38.402193146417446,
+            "energy_mae_kcal": 129.44506028429976
+          },
+          "high (2.57-7.16 kcal/g)": {
+            "n": 331,
+            "mae_g": 50.510111570996976,
+            "median_relative_error_pct": 50.546644444444446,
+            "energy_mae_kcal": 183.87927641565764
+          }
+        }
+      },
+      "DINOv2-large, multi-domain": {
+        "mae_g": 41.975128623,
+        "median_relative_error_pct": 24.050649711399707,
+        "within_20pct": 41.699999999999996,
+        "energy_mae_kcal": 83.72124125456506,
+        "energy_error_100kcal_or_more_pct": 22.2,
+        "by_energy_density": {
+          "low (0.12-1.09 kcal/g)": {
+            "n": 336,
+            "mae_g": 41.557077313988096,
+            "median_relative_error_pct": 19.14012121212121,
+            "energy_mae_kcal": 28.31563258619733
+          },
+          "middle (1.09-2.57 kcal/g)": {
+            "n": 333,
+            "mae_g": 47.71840248948949,
+            "median_relative_error_pct": 22.14197312252964,
+            "energy_mae_kcal": 95.27856571557531
+          },
+          "high (2.57-7.16 kcal/g)": {
+            "n": 331,
+            "mae_g": 36.62151847885196,
+            "median_relative_error_pct": 37.955915625,
+            "energy_mae_kcal": 128.3366354148525
+          }
+        }
+      }
+    }
+  }
+}

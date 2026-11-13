@@ -26,6 +26,21 @@ MODEL = os.environ.get("DINOV2_PATH", "/mnt/sdb/models/dinov2-base")
 MEAN, STD = np.array([0.485, 0.456, 0.406]), np.array([0.229, 0.224, 0.225])
 SIZE = (448, 336)  # width, height; multiples of the 14-pixel patch, keeps 4:3 aspect
 LO, HI = 10.0, 1500.0
+# "stretch": resize every photograph to SIZE (the paper's rule; non-4:3 photographs are distorted).
+# "pad": keep the aspect ratio, fit inside a PAD x PAD square and fill the rest with the mean colour (0 after
+# normalisation). Set by --preprocess in the training scripts and read back from config.json by the scorers.
+PREPROC = "stretch"
+PAD = 448
+
+
+def to_input(im):
+    if PREPROC == "stretch":
+        return im.resize(SIZE, Image.BICUBIC)
+    w, h = im.size; s = PAD / max(w, h)
+    im = im.resize((max(1, round(w * s)), max(1, round(h * s))), Image.BICUBIC)
+    canvas = Image.new("RGB", (PAD, PAD), tuple(int(round(m * 255)) for m in MEAN))
+    canvas.paste(im, ((PAD - im.width) // 2, (PAD - im.height) // 2))
+    return canvas
 
 
 def depth_volume_proxy(path):
@@ -40,7 +55,7 @@ def depth_volume_proxy(path):
 
 
 def load_rgb(path, train, rng, aug=None):
-    im = Image.open(path).convert("RGB").resize(SIZE, Image.BICUBIC)
+    im = to_input(Image.open(path).convert("RGB"))
     x = np.asarray(im, dtype=np.float32) / 255
     if aug is not None:  # pre-drawn (flip_h, flip_v, gain, offset), used by the threaded loader
         if aug[0]: x = x[:, ::-1]
@@ -210,7 +225,10 @@ def main():
     p.add_argument("--freeze-backbone", action="store_true", help="train only the head on frozen backbone features (baseline)")
     p.add_argument("--save-checkpoints", action="store_true",
                    help="also write foldN.pt (model state_dict + vocab) so the fold ensemble can score new cohorts")
+    p.add_argument("--preprocess", choices=["stretch", "pad"], default="stretch", help="see PREPROC")
     args = p.parse_args()
+    global PREPROC
+    PREPROC = args.preprocess
     args.output_dir.mkdir(parents=True, exist_ok=True)
     (args.output_dir / "config.json").write_text(json.dumps({**{k: str(v) for k, v in vars(args).items()}, "backbone": MODEL}, indent=2))
 

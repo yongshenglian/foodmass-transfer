@@ -1,0 +1,416 @@
+{
+  "scope": "Retrospective completion of the model-by-dataset comparison; no model selection",
+  "datasets": {
+    "n5k_internal": {
+      "label": "Nutrition5k internal",
+      "photographs": 498,
+      "sample": "../experiments/confirmation_photo_only/confirmation_498_sample.csv",
+      "sample_sha256": "c3d5c0e12197eabf6c6ac620d9caab6feadaf11365e70590102c2edca309cf06"
+    },
+    "asa24": {
+      "label": "ASA24",
+      "photographs": 1000,
+      "sample": "../experiments/asa24_external/asa24_aerial_sample.csv",
+      "sample_sha256": "b4a3ba66591a2a6d609fe971652f6a88dc4efbcda19d3bd08d586a19577d444d"
+    },
+    "ecustfd_top": {
+      "label": "ECUSTFD overhead",
+      "photographs": 1429,
+      "sample": "../experiments/external_ecustfd/ecustfd_top_sample.csv",
+      "sample_sha256": "e34e08f8aa1e7a528206beeb1fe8ed4f5ed2e79699ece88c3498803a216f958b"
+    },
+    "ecustfd_side": {
+      "label": "ECUSTFD side",
+      "photographs": 1441,
+      "sample": "../experiments/ecustfd_side_view/ecustfd_side_sample.csv",
+      "sample_sha256": "4cc03fcefb6ee1842dd1757c7c5b7e22512beb85f251532dcec701e6031dc624"
+    },
+    "fpb": {
+      "label": "FPB",
+      "photographs": 2034,
+      "sample": "../experiments/external_fpb/fpb_val_eval.csv",
+      "sample_sha256": "3a9a071521702e23aea6e5d0a1280351107cf2ba9fd8b0bc66df4f0dbc1713d5"
+    },
+    "nvr": {
+      "label": "NutritionVerse-Real",
+      "photographs": 889,
+      "sample": "../experiments/nutritionverse_real/nvr_sample.csv",
+      "sample_sha256": "b7ba465292a9523c529440bad90c067bcbe42c1242851ee5eb65b98a51413c18"
+    }
+  },
+  "models": {
+    "base_n5k": {
+      "backbone": "Base",
+      "training": "Nutrition5k",
+      "run_directory": "../experiments/qwen3vl_journal_v2_training/stage_b_imageonly_aux10",
+      "datasets": {
+        "n5k_internal": {
+          "status": "evaluated",
+          "n": 498,
+          "mae_g": 19.70773189558233,
+          "spearman": 0.9783606235342424,
+          "scale_ratio": 0.9985783918902954,
+          "oracle_mae_g": 19.654198091212066,
+          "prediction_file": "../experiments/confirmation_photo_only/dinov2_photo_only_n5k.csv",
+          "prediction_sha256": "7b974e54655bc9d3422d72a454b398a995f3367e98bbe74135a233d532e3d65f"
+        },
+        "asa24": {
+          "status": "evaluated",
+          "n": 1000,
+          "mae_g": 67.905422171,
+          "spearman": 0.7877940794624256,
+          "scale_ratio": 0.9592262705762155,
+          "oracle_mae_g": 68.35720755552794,
+          "prediction_file": "../experiments/asa24_external/finetuned_stage_b_imageonly_aux10.csv",
+          "prediction_sha256": "15758f749283de37431d59b85fd643c11113e17704b341b8f5a31de888557c69"
+        },
+        "ecustfd_top": {
+          "status": "evaluated",
+          "n": 1429,
+          "mae_g": 44.7021537676697,
+          "spearman": 0.7477657386459212,
+          "scale_ratio": 1.0186649487150006,
+          "oracle_mae_g": 45.209357584967826,
+          "prediction_file": "../experiments/external_ecustfd/pred_n5k_imageonly.csv",
+          "prediction_sha256": "81d3539284493c14ab3afa1b4980e00f3249ee92ea624eb69e7ed41ba3402dd8"
+        },
+        "ecustfd_side": {
+          "status": "evaluated",
+          "n": 1441,
+          "mae_g": 55.001134485773754,
+          "spearman": 0.7880277635725746,
+          "scale_ratio": 0.7592284017012786,
+          "oracle_mae_g": 45.24965786667155,
+          "prediction_file": "../experiments/ecustfd_side_view/pred_n5k_imageonly.csv",
+          "prediction_sha256": "abd949341c90751f7a4aab2e7c9f7f20d0e0caaa420ca8d9dd862b4b849c4955"
+        },
+        "fpb": {
+          "status": "evaluated",
+          "n": 2034,
+          "mae_g": 467.53402050147486,
+          "spearman": 0.5631553771862227,
+          "scale_ratio": 0.13710203719905598,
+          "oracle_mae_g": 431.46217012962035,
+          "prediction_file": "../experiments/external_fpb/pred_n5k_imageonly.csv",
+          "prediction_sha256": "13d0e20eaaf2b1a25daaab3c37ed34f8a8e9590034fc29b8329edccce8bf98f8"
+        },
+        "nvr": {
+          "status": "evaluated",
+          "n": 889,
+          "mae_g": 300.67154154949384,
+          "spearman": 0.5961456565503508,
+          "scale_ratio": 0.3040135085052664,
+          "oracle_mae_g": 183.71032583321497,
+          "prediction_file": "../experiments/nutritionverse_real/pred_n5k_imageonly.csv",
+          "prediction_sha256": "faa4a25f6ece4b45bea66df89cb591103372c2066763d1c81aebf179563e08ff",
+          "mae_ci95": [
+            266.03075370506934,
+            337.312788307815
+          ],
+          "interval_source": "original NutritionVerse-Real results.json"
+        }
+      }
+    },
+    "base_n5k_asa24": {
+      "backbone": "Base",
+      "training": "Nutrition5k + strict ASA24",
+      "run_directory": "../experiments/asa24_external/runs/joint_base_stretch",
+      "datasets": {
+        "n5k_internal": {
+          "status": "evaluated",
+          "n": 498,
+          "mae_g": 19.737260311244977,
+          "spearman": 0.9798515457886795,
+          "scale_ratio": 1.0125231312670468,
+          "oracle_mae_g": 19.920710126461042,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_n5k_internal.csv",
+          "prediction_sha256": "e5e063a3d0a335ebc60257e67715cc13fa9b0a0f004b0ff51bbee3ec00b1aadc",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint_base_stretch/fold0.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold1.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold2.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold3.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        },
+        "asa24": {
+          "status": "evaluated",
+          "n": 1000,
+          "mae_g": 45.8129026485,
+          "spearman": 0.8882689632872796,
+          "scale_ratio": 1.0083980079587231,
+          "oracle_mae_g": 45.93615833994579,
+          "prediction_file": "../experiments/asa24_external/runs/joint_base_stretch/asa24_test_predictions.csv",
+          "prediction_sha256": "648c00e7e13c4076af32b18e0acebfea08b25836600423e79806135df9b9cfed"
+        },
+        "ecustfd_top": {
+          "status": "evaluated",
+          "n": 1429,
+          "mae_g": 40.96920512386284,
+          "spearman": 0.7773626794057553,
+          "scale_ratio": 1.1179603785132457,
+          "oracle_mae_g": 43.15311330265135,
+          "prediction_file": "../experiments/external_ecustfd/pred_joint_base_stretch.csv",
+          "prediction_sha256": "961cdc6bc04fa7fb6794d7bc20fbb745ee56c1b264eb392109e97ca50e494f92"
+        },
+        "ecustfd_side": {
+          "status": "evaluated",
+          "n": 1441,
+          "mae_g": 52.663566110340035,
+          "spearman": 0.7996269213697423,
+          "scale_ratio": 0.7706244534901934,
+          "oracle_mae_g": 45.97953172136583,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_ecustfd_side.csv",
+          "prediction_sha256": "9f3c22d7661e4f23c31c64c91066fda67ed0538bd99a0856221f504ca8a5cd13",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint_base_stretch/fold0.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold1.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold2.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold3.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        },
+        "fpb": {
+          "status": "evaluated",
+          "n": 2034,
+          "mae_g": 463.46585653490655,
+          "spearman": 0.5872762938073545,
+          "scale_ratio": 0.13792070599120557,
+          "oracle_mae_g": 449.30617222240704,
+          "prediction_file": "../experiments/external_fpb/pred_joint_base_stretch.csv",
+          "prediction_sha256": "064a795250762547380ea42e78c72b42bb43df73789ba61579486412ccc4b948"
+        },
+        "nvr": {
+          "status": "evaluated",
+          "n": 889,
+          "mae_g": 305.0474466197976,
+          "spearman": 0.5680729908020302,
+          "scale_ratio": 0.2808099263913079,
+          "oracle_mae_g": 207.50793793168478,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_nvr.csv",
+          "prediction_sha256": "6d14ddb87cb1a3c609f6aad79a4adfd3ddc376b072e196083b40334da4fe68a5",
+          "mae_ci95": [
+            269.6449456480391,
+            342.4145012434077
+          ],
+          "interval_source": "10,000 dish bootstrap resamples; seed 0; fixed predictions",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint_base_stretch/fold0.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold1.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold2.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold3.pt",
+              "../experiments/asa24_external/runs/joint_base_stretch/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        }
+      }
+    },
+    "base_n5k_asa24_fpb": {
+      "backbone": "Base",
+      "training": "Nutrition5k + expanded ASA24 + FPB",
+      "run_directory": "../experiments/asa24_external/runs/joint3_base",
+      "datasets": {
+        "n5k_internal": {
+          "status": "evaluated",
+          "n": 498,
+          "mae_g": 20.34965414457831,
+          "spearman": 0.9772044078979063,
+          "scale_ratio": 1.0266368081233035,
+          "oracle_mae_g": 20.76938650219673,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_fpb_n5k_internal.csv",
+          "prediction_sha256": "7fc4d5498ee74d49e629bd9a262422c07211c3c8e8749dc4c90bc3f708201e52",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint3_base/fold0.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold1.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold2.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold3.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        },
+        "asa24": {
+          "status": "evaluated",
+          "n": 1000,
+          "mae_g": 47.0947240705,
+          "spearman": 0.8818636986322366,
+          "scale_ratio": 0.9971383663003949,
+          "oracle_mae_g": 47.062828861390095,
+          "prediction_file": "../experiments/asa24_external/runs/joint3_base/asa24_test_predictions.csv",
+          "prediction_sha256": "9db6992cb37af8380a37746096d37c5f6852da30f80ba655747e93fe7f2afe69"
+        },
+        "ecustfd_top": {
+          "status": "evaluated",
+          "n": 1429,
+          "mae_g": 58.35865199090273,
+          "spearman": 0.8140775364618844,
+          "scale_ratio": 1.6259896948121673,
+          "oracle_mae_g": 43.70639502113935,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_fpb_ecustfd_top.csv",
+          "prediction_sha256": "00be53441fcd60f3cda3bf8646075eb10913340e36b660e145a0dd558bfb5603",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint3_base/fold0.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold1.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold2.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold3.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        },
+        "ecustfd_side": {
+          "status": "evaluated",
+          "n": 1441,
+          "mae_g": 127.97032424843859,
+          "spearman": 0.7275109184398236,
+          "scale_ratio": 2.2903102982081958,
+          "oracle_mae_g": 49.01934164544645,
+          "prediction_file": "../experiments/dinov2_dataset_matrix/predictions/base_n5k_asa24_fpb_ecustfd_side.csv",
+          "prediction_sha256": "35d4a4002d03a5aeceda74168173c1ea9c0d5e322931497cf61c73d3f0a605a2",
+          "inference_metadata": {
+            "device": "cuda",
+            "torch": "2.6.0+cu124",
+            "backbone": "/home/lian/models/dinov2-base",
+            "checkpoints": [
+              "../experiments/asa24_external/runs/joint3_base/fold0.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold1.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold2.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold3.pt",
+              "../experiments/asa24_external/runs/joint3_base/fold4.pt"
+            ],
+            "preprocessing": "stretch",
+            "batch_size": 32
+          }
+        },
+        "fpb": {
+          "status": "evaluated",
+          "n": 2034,
+          "mae_g": 161.69480883677485,
+          "spearman": 0.8746306491881758,
+          "scale_ratio": 0.8188949031769243,
+          "oracle_mae_g": 138.78163684668021,
+          "prediction_file": "../experiments/asa24_external/runs/joint3_base/fpb_val_predictions.csv",
+          "prediction_sha256": "a55c3d39764e4c2191cc45eae9bb237e8f7ed0637b7dcdfde017c59c32e517ff"
+        },
+        "nvr": {
+          "status": "evaluated",
+          "n": 889,
+          "mae_g": 202.0587955736783,
+          "spearman": 0.6488050241907636,
+          "scale_ratio": 0.6058689322429124,
+          "oracle_mae_g": 168.29553986839147,
+          "prediction_file": "../experiments/nutritionverse_real/pred_joint3_base.csv",
+          "prediction_sha256": "e324cddc0200af3a57f66d4ff13cafe24912dd05fd0ee9c1d5b6d118af0c62f7",
+          "mae_ci95": [
+            171.2112693078387,
+            235.7282432870785
+          ],
+          "interval_source": "original NutritionVerse-Real results.json"
+        }
+      }
+    },
+    "large_n5k_asa24": {
+      "backbone": "Large",
+      "training": "Nutrition5k + expanded ASA24",
+      "run_directory": "../experiments/asa24_external/runs/joint_large_consensus",
+      "datasets": {
+        "n5k_internal": {
+          "status": "evaluated",
+          "n": 498,
+          "mae_g": 17.453332957831325,
+          "spearman": 0.9830777692299433,
+          "scale_ratio": 1.0150040907251854,
+          "oracle_mae_g": 17.66010026150446,
+          "prediction_file": "../experiments/confirmation_photo_only/dinov2_large_multidomain.csv",
+          "prediction_sha256": "ead5860a7a1aba46c5c9aeb1db1c65c992faf7f336cd5655793f98220d0e6446"
+        },
+        "asa24": {
+          "status": "evaluated",
+          "n": 1000,
+          "mae_g": 41.975128623,
+          "spearman": 0.8997196752730487,
+          "scale_ratio": 1.0151473044055115,
+          "oracle_mae_g": 42.22556527650879,
+          "prediction_file": "../experiments/asa24_external/runs/joint_large_consensus/asa24_test_predictions.csv",
+          "prediction_sha256": "09578c926895b55e1efc7ffa8a94ca2a638495d906eaa1388d81ea6ef5efb5ac"
+        },
+        "ecustfd_top": {
+          "status": "evaluated",
+          "n": 1429,
+          "mae_g": 35.975448097970606,
+          "spearman": 0.829743078088073,
+          "scale_ratio": 1.0966733572355547,
+          "oracle_mae_g": 37.96479196588764,
+          "prediction_file": "../experiments/external_ecustfd/pred_joint_large_consensus.csv",
+          "prediction_sha256": "91b5b0f0d2194aec311f82d71bde42041c278eeed13ad4f9a95e97cc49483e1e"
+        },
+        "ecustfd_side": {
+          "status": "evaluated",
+          "n": 1441,
+          "mae_g": 48.33876750451076,
+          "spearman": 0.8357395668384532,
+          "scale_ratio": 0.7965312123065343,
+          "oracle_mae_g": 41.71450146823149,
+          "prediction_file": "../experiments/ecustfd_side_view/pred_joint_large_consensus.csv",
+          "prediction_sha256": "8b4e9e29ea52f9769a8e466bb5418368b1cd3fa9fcebbd863f2b13815e07e04c"
+        },
+        "fpb": {
+          "status": "evaluated",
+          "n": 2034,
+          "mae_g": 463.5911992991642,
+          "spearman": 0.561043039924092,
+          "scale_ratio": 0.13537417616758796,
+          "oracle_mae_g": 476.477327726743,
+          "prediction_file": "../experiments/external_fpb/pred_joint_large_consensus.csv",
+          "prediction_sha256": "dc4fbdec0fa9dc2a30e6b01f19d6e05e240f850398ede5321f34298004d97ef1"
+        },
+        "nvr": {
+          "status": "evaluated",
+          "n": 889,
+          "mae_g": 301.4875785753656,
+          "spearman": 0.5813198121734882,
+          "scale_ratio": 0.28474436167786493,
+          "oracle_mae_g": 209.8820315867026,
+          "prediction_file": "../experiments/nutritionverse_real/pred_joint_large_consensus.csv",
+          "prediction_sha256": "956a3b4d693d6a3c9e398c950fcb60cd2946007feaf1bc2fa5a6ca2a80b42f1b",
+          "mae_ci95": [
+            266.850470747645,
+            338.21344947442077
+          ],
+          "interval_source": "original NutritionVerse-Real results.json"
+        }
+      }
+    }
+  },
+  "missing_predictions": []
+}

@@ -1,0 +1,540 @@
+{
+  "generated_utc": "2026-11-12T21:40:42+00:00",
+  "repository_commit": "c6b4f7b42e88d85c31865f39cf0af812fba6a2a0",
+  "uncommitted_changes": true,
+  "checkpoints": {
+    "Nutrition5k-only, DINOv2-base (paper's final model)": {
+      "run_directory": "experiments/qwen3vl_journal_v2_training/stage_b_imageonly_aux10",
+      "config": {
+        "output_dir": "../experiments/qwen3vl_journal_v2_training/stage_b_imageonly_aux10",
+        "epochs": "15",
+        "batch_size": "16",
+        "backbone_lr": "2e-05",
+        "head_lr": "0.001",
+        "aux_weight": "1.0",
+        "target": "log_mass",
+        "folds": "5",
+        "only_folds": "",
+        "seed": "20261004",
+        "device": "cuda",
+        "smoke": "False",
+        "no_ingredients": "False",
+        "zero_side": "qwen,conf,count,ingr",
+        "workers": "16",
+        "save_checkpoints": "True"
+      },
+      "fold_checkpoints": {
+        "fold0.pt": "09b125589056144b41a9df821707a547ca7ba62c77aed48110883a5738d6683f",
+        "fold1.pt": "a47776e0bdd5947632dad4f8666782d9c20697f3a5c1832f3cd8372c8b5c4201",
+        "fold2.pt": "54ac43e9daf30554f62ae6945ff96dc846f14a7374c00a4bf62da7451218fa42",
+        "fold3.pt": "8dc1f2d39a8cbac5e51ac2eb3ed764b7e08e2514f1e5dbf2c433fb26799661f4",
+        "fold4.pt": "998de81f5674a908648cf1b0655969f2064ef15c77284c98a1fd9b33d67d7735"
+      }
+    },
+    "Two-domain, DINOv2-base (Nutrition5k + strict ASA24; data-addition control)": {
+      "run_directory": "experiments/asa24_external/runs/joint_base_stretch",
+      "config": {
+        "output_dir": "../experiments/asa24_external/runs/joint_base_stretch",
+        "domains": "n5k,asa24",
+        "pad43": "False",
+        "qwen": "False",
+        "domain_flag": "False",
+        "asa_weight": "1.0",
+        "aux_weight": "1.0",
+        "epochs": "15",
+        "batch_size": "16",
+        "backbone_lr": "2e-05",
+        "head_lr": "0.001",
+        "seed": "20261004",
+        "folds": "5",
+        "workers": "16",
+        "backbone": "/home/lian/models/dinov2-base"
+      },
+      "fold_checkpoints": {
+        "fold0.pt": "fad1d0bc8df9413df716b57c3f9603592e935c716dee82b005f7377dd7c9ec32",
+        "fold1.pt": "cef426605e0db330b1ddfee0764f1ba2e76966d599710533dc1ec729536f5286",
+        "fold2.pt": "653d15cb5cf0db3e5bd6e68c1f7d30362ff0b918f49566494f1d047edb916715",
+        "fold3.pt": "5490bb39aa88af6f8f4c62a67ccfac80f84f5a55ca3a8474079744d26a6b08f2",
+        "fold4.pt": "7e68bec96e02c650b56692bdf18a5b10236b38c19d87aaabf9cd82c2f03b98d2"
+      }
+    },
+    "Two-domain, DINOv2-large (Nutrition5k + expanded ASA24)": {
+      "run_directory": "experiments/asa24_external/runs/joint_large_consensus",
+      "config": {
+        "output_dir": "../experiments/asa24_external/runs/joint_large_consensus",
+        "domains": "n5k,asa24",
+        "pool": "asa24_train_pool_consensus.csv",
+        "pad43": "False",
+        "qwen": "False",
+        "domain_flag": "False",
+        "text_features": "False",
+        "asa_weight": "1.0",
+        "aux_weight": "1.0",
+        "mass_weight_power": "0.0",
+        "epochs": "15",
+        "batch_size": "16",
+        "backbone_lr": "2e-05",
+        "head_lr": "0.001",
+        "seed": "20261004",
+        "folds": "5",
+        "workers": "16",
+        "backbone": "/home/lian/models/dinov2-large"
+      },
+      "fold_checkpoints": {
+        "fold0.pt": "8959043ca39977a2f2f5dd27321358470af8d444a213c025d8b25f994fa8742b",
+        "fold1.pt": "67ed41234b9dec3e6ad4543bf48badafbaee2ae1b66302e257120d5bb09c4411",
+        "fold2.pt": "c6eda085fcfa8a79d2a0cdb62a3f7c37a904a3f773aec2bcc1eab1d71ccae9e2",
+        "fold3.pt": "de5fff41d2352d69bc0d4d6b30a0a3ff959de4cde1d2da2f61a5cdf79005190f",
+        "fold4.pt": "330534471bf0c30078cd9ea53102ec2948dfc73b517b68c4ee5957168560f918"
+      }
+    },
+    "Three-domain, DINOv2-base (Nutrition5k + ASA24 + FPB)": {
+      "run_directory": "experiments/asa24_external/runs/joint3_base",
+      "config": {
+        "output_dir": "../experiments/asa24_external/runs/joint3_base",
+        "domains": "n5k,asa24,fpb",
+        "pool": "asa24_train_pool_consensus.csv",
+        "pad43": "False",
+        "qwen": "False",
+        "domain_flag": "False",
+        "fpb": "True",
+        "text_features": "False",
+        "asa_weight": "1.0",
+        "aux_weight": "1.0",
+        "mass_weight_power": "0.0",
+        "epochs": "15",
+        "batch_size": "16",
+        "backbone_lr": "2e-05",
+        "head_lr": "0.001",
+        "seed": "20261004",
+        "folds": "5",
+        "workers": "16",
+        "backbone": "/home/lian/models/dinov2-base"
+      },
+      "fold_checkpoints": {
+        "fold0.pt": "36ae81039ba6674305a0abc339408e21701673f0ce44d4e88395d4588d544780",
+        "fold1.pt": "fcb696766e513c5ebff6ca4d8277f7fd1473477bdf307ef9d5fc94de6d7566b8",
+        "fold2.pt": "582609051e2897f91ce9874f9198a82834010b5409674e1fb9b18b747f6c78cb",
+        "fold3.pt": "bd3598a001647b145002818c00a0345d055910725aba494441f7866379182fff",
+        "fold4.pt": "23f5ab472ac74c8f8d8dc1e9a514caa3f4cbbe3a0fd9db055258f8b06bd5d1d2"
+      }
+    },
+    "Nutrition5k-only, DINOv2-large (backbone control)": {
+      "run_directory": "experiments/review_controls/runs/large_depth_s20261004",
+      "config": {
+        "output_dir": "/home/lian/dietai26/experiments/review_controls/runs/large_depth_s20261004",
+        "epochs": "15",
+        "batch_size": "16",
+        "backbone_lr": "2e-05",
+        "head_lr": "0.001",
+        "aux_weight": "1.0",
+        "target": "log_mass",
+        "folds": "5",
+        "only_folds": "",
+        "seed": "20261004",
+        "device": "cuda",
+        "smoke": "False",
+        "no_ingredients": "False",
+        "zero_side": "qwen,conf,count,ingr",
+        "nutrient_weight": "0.0",
+        "workers": "16",
+        "freeze_backbone": "False",
+        "save_checkpoints": "True",
+        "backbone": "/home/lian/models/dinov2-large"
+      },
+      "fold_checkpoints": {
+        "fold0.pt": "5bde280581a4678311f8d8c56deb1698249afca0e33f2516814579b8d935113b",
+        "fold1.pt": "54922d135f561c855ed23c92da9877895339c5d56d0547fea49abf0cc6f8614a",
+        "fold2.pt": "574ed3ba4acd39be227fa32dc7c3ab63969d8e3cb9d8295233aeeae5b17f7d62",
+        "fold3.pt": "3a432c5adce6eb09cf410f160cab02647e9a53d6999ae40ecf7a20c1d7d8e2eb",
+        "fold4.pt": "29117b25ea0e7143583757c73b6f603e8ab91d8dd2ea6e96de4431d45d475844"
+      }
+    }
+  },
+  "qwen_inference": {
+    "Nutrition5k validation": {
+      "file": "experiments/n5k_single_prompt/qwen_blind_val_fp8.csv",
+      "rows": 502,
+      "sha256": "3cee5bfc493e722c19208ba1d1085be2e99e2ea62aa5681786764984d92027e4",
+      "status_log": [
+        "2026-10-09T10:49:20-04:00 vllm_start exit=0",
+        "2026-10-09T10:53:15-04:00 qwen_blind_val exit=0",
+        "2026-10-09T10:57:08-04:00 qwen_blind_test exit=0",
+        "2026-10-09T10:57:09-04:00 vllm_stop exit=0"
+      ]
+    },
+    "Nutrition5k in-domain test": {
+      "file": "experiments/n5k_single_prompt/qwen_blind_test_fp8.csv",
+      "rows": 498,
+      "sha256": "f112276364e3338e7ec44d54530ad1346bc60e4f3f18bba04ec0f3d978b9d1d2",
+      "status_log": [
+        "2026-10-09T10:49:20-04:00 vllm_start exit=0",
+        "2026-10-09T10:53:15-04:00 qwen_blind_val exit=0",
+        "2026-10-09T10:57:08-04:00 qwen_blind_test exit=0",
+        "2026-10-09T10:57:09-04:00 vllm_stop exit=0"
+      ]
+    },
+    "Nutrition5k training (grouped CV, second machine)": {
+      "file": "experiments/n5k_grouped_cv/qwen_blind_train_fp8.csv",
+      "rows": 2253,
+      "sha256": "cde4193634009ecdd5ca4b2b450fbd3694001ce233d2aa24bc90ac45984ea8cb",
+      "status_log": [
+        "2026-10-29T18:28:41-04:00 vllm_start exit=1",
+        "2026-10-29T19:37:17-04:00 vllm_start exit=1",
+        "2026-10-29T19:47:04-04:00 vllm_start exit=1",
+        "2026-10-29T21:04:48-04:00 vllm_start exit=1",
+        "2026-10-29T21:30:29-04:00 vllm_start exit=0",
+        "2026-10-29T21:31:37-04:00 qwen_check exit=0",
+        "2026-10-29T21:43:34-04:00 qwen_train exit=0",
+        "2026-10-29T21:43:37-04:00 vllm_stop exit=0"
+      ]
+    },
+    "ASA24 test": {
+      "file": "experiments/asa24_external/qwen_blind_fp8_lenient.csv",
+      "rows": 1000,
+      "sha256": "431ae7cabb95fc1f17ab17c08068c6986beeca4f927f1f9eec6b23b2ac8b2209",
+      "status_log": [
+        "2026-10-02T18:40:01-04:00 vllm_start exit=0",
+        "2026-10-02T18:43:31-04:00 qwen_oracle exit=0",
+        "2026-10-02T18:46:19-04:00 qwen_blind exit=0",
+        "2026-10-02T18:46:19-04:00 vllm_stop exit=0"
+      ]
+    },
+    "ECUSTFD top": {
+      "file": "experiments/external_ecustfd/qwen_blind_fp8.csv",
+      "rows": 1429,
+      "sha256": "44d73f6d80c9456c64501aa2d744c7c2beb3fe11b5b10c69ae5ca7d25926c8fe",
+      "status_log": [
+        "2026-10-04T09:02:17-04:00 vllm_start exit=0",
+        "2026-10-04T09:14:15-04:00 qwen_oracle exit=0",
+        "2026-10-04T09:26:17-04:00 qwen_blind exit=0",
+        "2026-10-04T09:26:18-04:00 vllm_stop exit=0"
+      ]
+    },
+    "ECUSTFD side": {
+      "file": "experiments/ecustfd_side_view/qwen_blind_fp8.csv",
+      "rows": 1441,
+      "sha256": "862a03e8cc605f694fd57432589e9d22f2ff8285b338bfbc825a14ac74056546",
+      "status_log": [
+        "2026-10-09T12:50:36-04:00 vllm_start exit=0",
+        "2026-10-09T13:02:45-04:00 qwen_blind exit=0",
+        "2026-10-09T13:02:46-04:00 vllm_stop exit=0"
+      ]
+    },
+    "FPB test": {
+      "file": "experiments/external_fpb/qwen_blind_fp8.csv",
+      "rows": 2351,
+      "sha256": "874b9c4f503c4419b6fff84962815be8042e2318e42ed6fd58a01b47c47dd771",
+      "status_log": [
+        "2026-10-04T09:55:17-04:00 vllm_start exit=0",
+        "2026-10-04T10:26:00-04:00 qwen_oracle exit=0",
+        "2026-10-04T10:57:34-04:00 qwen_blind exit=0",
+        "2026-10-04T10:57:35-04:00 vllm_stop exit=0"
+      ]
+    },
+    "NutritionVerse-Real": {
+      "file": "experiments/nutritionverse_real/qwen_blind_fp8.csv",
+      "rows": 889,
+      "sha256": "ba04cf2abdf243836750870571502409849383458640fce49470e061ad447a6a",
+      "status_log": [
+        "2026-10-10T09:39:13-04:00 vllm_start exit=0",
+        "2026-10-10T09:52:34-04:00 qwen exit=0"
+      ]
+    }
+  },
+  "analysis_plans": {
+    "experiments/area_baseline/PLAN.md": {
+      "declared_in_text": "2026-10-12",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "6d939addf0eebd3b6e7f779648cb3981e5cdfaf25dc7bc18b1bd29e8455edbfa",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/aspect_control/PLAN.md": {
+      "declared_in_text": "2026-10-30",
+      "first_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00",
+      "sha256": "762ebe3ed1f5e2a9a58bf4e3c84af6e4105868b69bd0a8bc4e109ec17f47eede",
+      "last_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00"
+    },
+    "experiments/clinical_endpoints/PLAN.md": {
+      "declared_in_text": "2026-10-09",
+      "first_commit": "e1398ca0530961da9aa59fcc6416e2d606d1024b 2026-10-09T15:08:47+00:00",
+      "sha256": "57ad79064fd67d78ed90e4a5ffb78c39e224c9e7dea933a167a9a2fa8169e4b2",
+      "last_commit": "e1398ca0530961da9aa59fcc6416e2d606d1024b 2026-10-09T15:08:47+00:00"
+    },
+    "experiments/dinov2_dataset_matrix/PLAN.md": {
+      "declared_in_text": null,
+      "first_commit": "dec44a3efe299931d59ffb9c102be8cb39c38fdd 2026-11-11T21:00:22-05:00",
+      "sha256": "4206585c5bf508d41c01ad89c3bfccd3809afa127212b22c782db059953fdd18",
+      "last_commit": "dec44a3efe299931d59ffb9c102be8cb39c38fdd 2026-11-11T21:00:22-05:00"
+    },
+    "experiments/ecustfd_backbone_control/PLAN.md": {
+      "declared_in_text": "2026-10-30",
+      "first_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00",
+      "sha256": "2937a41372178f9c253b26268d87231c25dcd2c86cba4127795a1da0ec4853f3",
+      "last_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00"
+    },
+    "experiments/ecustfd_known_food/PLAN.md": {
+      "declared_in_text": "2026-10-29",
+      "first_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00",
+      "sha256": "c10f2b6d35d1c732e7b07eb438c7842f5a0adcd539bcf2fc6f16dcce9e1750cc",
+      "last_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00"
+    },
+    "experiments/ecustfd_scale/PLAN.md": {
+      "declared_in_text": "2026-10-12",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "fd08e2d501303b60d4108feba9cc164bba5766b3301a9c7a06de7dcde0570485",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/ecustfd_side_view/PLAN.md": {
+      "declared_in_text": "2026-10-09",
+      "first_commit": "d10ae9eccb0a72b3d24055e0b75eb44965ee7844 2026-10-09T16:30:47+00:00",
+      "sha256": "b00b5cfd4647b1267f6ad9507d6b0673698300c9a88883b4e56eb8f1e3e80c4d",
+      "last_commit": "d10ae9eccb0a72b3d24055e0b75eb44965ee7844 2026-10-09T16:30:47+00:00"
+    },
+    "experiments/fold_members/PLAN.md": {
+      "declared_in_text": "2026-10-09",
+      "first_commit": "bf6c852259db76460fac47f5261e09bebffe1b9d 2026-10-09T19:09:24+00:00",
+      "sha256": "1be085663323c778e4eb7ca87b06eb8c6fd0a6613eb923bebb74d323ec331194",
+      "last_commit": "bf6c852259db76460fac47f5261e09bebffe1b9d 2026-10-09T19:09:24+00:00"
+    },
+    "experiments/gpt6_luna/PLAN.md": {
+      "declared_in_text": "2026-10-15",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "402664383acdf8674c3d58a74059c9315bbd26cc71c07ff3b239a1fa0fef6f6f",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/intervals_consistent/PLAN.md": {
+      "declared_in_text": "2026-10-30",
+      "first_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00",
+      "sha256": "5c4ba689c5b1fa62159b565255813d161df5a4c929d238e941d8b9d2431e9807",
+      "last_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00"
+    },
+    "experiments/learning_curve/PLAN.md": {
+      "declared_in_text": "2026-10-30",
+      "first_commit": "dff86a8b318ff811fbb105883484b19431760f5a 2026-10-30T12:47:44-04:00",
+      "sha256": "69b799a9df9c77b3885a3ab1d13e9d2c6380b3dcda8d0812174853c890d770f3",
+      "last_commit": "dec44a3efe299931d59ffb9c102be8cb39c38fdd 2026-11-11T21:00:22-05:00"
+    },
+    "experiments/main_comparisons/PLAN.md": {
+      "declared_in_text": "2026-11-11",
+      "first_commit": "dec44a3efe299931d59ffb9c102be8cb39c38fdd 2026-11-11T21:00:22-05:00",
+      "sha256": "72a2018ba194764b77141e0ab0fbb3d8fc9bfc2e7038090f69e9f66978b39c0b",
+      "last_commit": "dec44a3efe299931d59ffb9c102be8cb39c38fdd 2026-11-11T21:00:22-05:00"
+    },
+    "experiments/matched_baselines/PLAN.md": {
+      "declared_in_text": "2026-10-10",
+      "first_commit": "206b411584adc8d288c09a850bc5ec60d951e420 2026-10-10T04:32:55+00:00",
+      "sha256": "d3b87389fc144ec8624b504eaba8d45d238f1938adb04589089a213f59a07e45",
+      "last_commit": "807535916fa714a82b835c523fbc0f95a6fe42c6 2026-10-10T12:33:40+00:00"
+    },
+    "experiments/n5k_grouped_cv/PLAN.md": {
+      "declared_in_text": "2026-10-29",
+      "first_commit": "723ee5a7fac7975473d73bf00be180438c247ef8 2026-10-29T15:56:05-04:00",
+      "sha256": "2f2a379b7d5f1d77207b6c39ec10d844f7432bfc6325bf7422b1b8f983f84253",
+      "last_commit": "723ee5a7fac7975473d73bf00be180438c247ef8 2026-10-29T15:56:05-04:00"
+    },
+    "experiments/n5k_sibling_leakage/PLAN.md": {
+      "declared_in_text": "2026-10-12",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "dc8d3726829c1677e77039bbb6b07fac8a36e231122a1830172b57b4a8c841ba",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/n5k_single_prompt/PLAN.md": {
+      "declared_in_text": "2026-10-09",
+      "first_commit": "228ae96aace0ae5e1f2ea3aeb1c88389e7d2efa1 2026-10-09T14:43:13+00:00",
+      "sha256": "ce42efb6bf1ab86ae259efe8c9440abc7d500c56784f358aa08f904b407d0835",
+      "last_commit": "228ae96aace0ae5e1f2ea3aeb1c88389e7d2efa1 2026-10-09T14:43:13+00:00"
+    },
+    "experiments/nutritionverse_real/PLAN.md": {
+      "declared_in_text": "2026-10-10",
+      "first_commit": "ec846eeb62cced62cd58b686b26f5677f935f6eb 2026-10-10T13:04:29+00:00",
+      "sha256": "ab35ea110df96f0939e2f7474adc55f8ae65f81ef5a38280176d4cbb5e48e42e",
+      "last_commit": "1a311fcf20ba414aac0563ed32d432d12c9c8488 2026-10-10T13:29:54+00:00"
+    },
+    "experiments/qwen_fpb_prompt/PLAN.md": {
+      "declared_in_text": "2026-10-12",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "ad0571bb1d24885d5590abd3918aca5e7803c99b00a57ea526230c08677b986d",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/review_controls/PLAN.md": {
+      "declared_in_text": "2026-10-12",
+      "first_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00",
+      "sha256": "77df47fb7eceafef2cb4e5b5d695e1bd8b318e0c09ace360c3fa6f21d9425843",
+      "last_commit": "6d4749aba0842ce6523b3b89430a00cac52190e3 2026-10-16T09:14:19-04:00"
+    },
+    "experiments/size_vs_data/PLAN.md": {
+      "declared_in_text": "2026-10-09",
+      "first_commit": "05eecc0f473fce4576bd12dead198b4ae651bf02 2026-10-09T16:39:45+00:00",
+      "sha256": "1e32a5e0360f7af2dda87b60c7457ae56bcc660031c95f2e63c6ff420418e510",
+      "last_commit": "05eecc0f473fce4576bd12dead198b4ae651bf02 2026-10-09T16:39:45+00:00"
+    }
+  },
+  "vllm_versions": {
+    "experiments/asa24_external/logs/vllm_server.log": "0.30.0",
+    "experiments/asa24_external/logs/vllm_server_pool.log": "0.30.0",
+    "experiments/confirmation_photo_only/logs/vllm.log": "0.30.0",
+    "experiments/ecustfd_side_view/logs/vllm.log": "0.30.0",
+    "experiments/external_ecustfd/logs/vllm.log": "0.30.0",
+    "experiments/external_fpb/logs/vllm.log": "0.30.0",
+    "experiments/n5k_grouped_cv/logs/vllm.log": "0.11.0",
+    "experiments/n5k_single_prompt/logs/vllm.log": "0.30.0",
+    "experiments/nutritionverse_real/logs/vllm.log": "0.30.0",
+    "experiments/qwen3vl_journal_v2_training/logs/vllm_server.log": "0.30.0",
+    "experiments/qwen3vl_journal_v2_training/logs/vllm_server_attempt1_flashinfer_nvcc.log": "0.30.0",
+    "experiments/qwen_fpb_prompt/logs/vllm.log": "0.30.0"
+  },
+  "analysis_results": {
+    "n5k_grouped_cv/results.json": {
+      "record_file": "results/n5k_grouped_cv.json",
+      "sha256": "f6737075fd4099c0aea3326ed293d6c92355082d4309c0234319d172c39ca92c"
+    },
+    "asa24_base_training/results.json": {
+      "record_file": "results/asa24_base_training.json",
+      "sha256": "e81ee24284c6de5956a99460fbb3bb413f79e90d874c5b54fae795f995518136"
+    },
+    "dinov2_dataset_matrix/results.json": {
+      "record_file": "results/dinov2_dataset_matrix.json",
+      "sha256": "a4171d6255fff4c8dda364c86c104e9dae41ff5e1512a9b48e25a9b3aeb5e540"
+    },
+    "main_comparisons/results.json": {
+      "record_file": "results/main_comparisons.json",
+      "sha256": "200fd9183ffe8a32e42bbb85870dba225432b53be48d37d76c8bd9fef710a555"
+    },
+    "aspect_control/results.json": {
+      "record_file": "results/aspect_control.json",
+      "sha256": "a8e85e94f9fa25cd1588dbec98fb8f8d419e792ad76c74c5508140571a2b8a15"
+    },
+    "learning_curve/results.json": {
+      "record_file": "results/learning_curve.json",
+      "sha256": "ef525596b6e498563257ff4232c91d2b5022ffced1cf2869fad839bfb386f823"
+    },
+    "intervals_consistent/results.json": {
+      "record_file": "results/intervals_consistent.json",
+      "sha256": "69bc8014f60b5dafd6c62cc2dfc383ac4a16a8ccf803489d3556a250e2be76e1"
+    },
+    "ecustfd_known_food/results.json": {
+      "record_file": "results/ecustfd_known_food.json",
+      "sha256": "0162d0f5b1f8e9f1d5ee403518a225e956485a284c45c18d6a436fa0312f5f4d"
+    },
+    "comment3_descriptives/results.json": {
+      "record_file": "results/comment3_descriptives.json",
+      "sha256": "c5abb46f22a1bb501ef86c1e34751990bb51377deab1c2733e2877eb33f7d4c1"
+    },
+    "comment8_energy/results.json": {
+      "record_file": "results/comment8_energy.json",
+      "sha256": "d03a98b96b749ad6106c405aa6235c7cec2bddc7f03d38711a8d1dc35e9c44c5"
+    },
+    "ecustfd_backbone_control/results.json": {
+      "record_file": "results/ecustfd_backbone_control.json",
+      "sha256": "37bc19eccf3b1e7f5f3ff10e7acefe0ecaefe8fd12528d6b34300beffa4fcdca"
+    },
+    "nutritionverse_real/results.json": {
+      "record_file": "results/nutritionverse_real.json",
+      "sha256": "2af8ecd28fac2647e2cff889b56086f2ea1295623f7fa3f87d78269f8baefd4b"
+    },
+    "comment6_statistics/group_weighting.json": {
+      "record_file": "results/comment6_statistics.json",
+      "sha256": "0ff4cfc324ab0e6052e770fd714a9f99a160b85c787b36d2fc002c90389bd1c7"
+    },
+    "gpt6_luna/gpt6_luna.json": {
+      "record_file": "results/gpt6_luna.json",
+      "sha256": "638dd63148eb0a7a6dff29aebaf9fe33eae7a04155213e418b393a132f7e89fa"
+    }
+  },
+  "matrix_inference_files": {
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_ecustfd_side.csv": "9f3c22d7661e4f23c31c64c91066fda67ed0538bd99a0856221f504ca8a5cd13",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_ecustfd_side.json": "8c816bd7a654ccdb40241ab2304778d644437a112a91fd42f2cf4c74cf499cfc",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_ecustfd_side.csv": "35d4a4002d03a5aeceda74168173c1ea9c0d5e322931497cf61c73d3f0a605a2",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_ecustfd_side.json": "b9e4814574fde5a837675eaf53ba0811741022c8af103455360e3199c86df556",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_ecustfd_top.csv": "00be53441fcd60f3cda3bf8646075eb10913340e36b660e145a0dd558bfb5603",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_ecustfd_top.json": "b9e4814574fde5a837675eaf53ba0811741022c8af103455360e3199c86df556",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_n5k_internal.csv": "7fc4d5498ee74d49e629bd9a262422c07211c3c8e8749dc4c90bc3f708201e52",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_fpb_n5k_internal.json": "b9e4814574fde5a837675eaf53ba0811741022c8af103455360e3199c86df556",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_n5k_internal.csv": "e5e063a3d0a335ebc60257e67715cc13fa9b0a0f004b0ff51bbee3ec00b1aadc",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_n5k_internal.json": "8c816bd7a654ccdb40241ab2304778d644437a112a91fd42f2cf4c74cf499cfc",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_nvr.csv": "6d14ddb87cb1a3c609f6aad79a4adfd3ddc376b072e196083b40334da4fe68a5",
+    "predictions/dinov2_dataset_matrix/base_n5k_asa24_nvr.json": "8c816bd7a654ccdb40241ab2304778d644437a112a91fd42f2cf4c74cf499cfc"
+  },
+  "manuscript_sources": {
+    "main_jbhi.tex": "20de3cb9ddde407b93b03f2a4d04cdc3dbb4ae34a73002da0511aa3d083be5d6",
+    "references.bib": "5f440e4d715e44ebde27281a30db28adb65b21358f2acf4f52f4b05887b3b778",
+    "make_jbhi_submission.py": "892ad26ee9bc8d917ee2f6b7c2639ca3f9aa2c9876d4128254f6d49b78114138"
+  },
+  "photography_examples": {
+    "record_file": "dataset_photo_examples.json",
+    "sha256": "013c9693fae6669d835e4ce5b8dd32bfb41bfa793911173dc93f03741fd79d4a"
+  },
+  "training_choices_figure": {
+    "script": "code/plot_training_choices.py",
+    "script_sha256": "80ef6b74fdd3f3b7901480ccf0d9a94456d6e273ee3eb944dc5e2c824b9fb5ec",
+    "source_record": "results/learning_curve.json",
+    "source_sha256": "ef525596b6e498563257ff4232c91d2b5022ffced1cf2869fad839bfb386f823",
+    "figure": "figures/fig_training_choices.pdf",
+    "figure_sha256": "a1849f35103a5544fc9f76f2f059ded6bcf6c49ad2e7c15149d7b2214d9a9193",
+    "selection": "Scalar calibration and both pooled training methods at all seven positive labeled-group counts; mean over three draws."
+  },
+  "main_comparison_script": {
+    "script": "code/analyze_main_comparisons.py",
+    "sha256": "03c5e948548835e8e3b5e41696e44115bc3f8e93fdac2f8d84c943d8f5054f7e",
+    "result_record": "results/main_comparisons.json"
+  },
+  "splits": {
+    "nutrition5k_training_2253": {
+      "rows": 2253,
+      "sha256": "fd3d41a4dd817adc61ed23a7ab1def5e4efdd86e0dc79f724a8d6821bccd41ce"
+    },
+    "nutrition5k_validation_502": {
+      "rows": 502,
+      "sha256": "eea5c8b2ca13263c394298b13149933b2a94ba7fe7d106bd2eb851228a6165a7"
+    },
+    "nutrition5k_in_domain_test_498": {
+      "rows": 498,
+      "sha256": "e089794b43ac81d08c10623c44469eaa99a8058df0386364a5c0b3d5fa775a37"
+    },
+    "nutrition5k_grouped_cv_folds": {
+      "rows": 3253,
+      "sha256": "55eb3cc0fba6f5c05ac6a0736e4a360b8536ce2b9180a05b58240748c49af293"
+    },
+    "asa24_training_pool_5099": {
+      "rows": 5099,
+      "sha256": "db34d13c09e3ce37b991aecc4bd3851037e34770c2fb7db0b44a4fa86b5cba62"
+    },
+    "asa24_training_pool_expanded_6329": {
+      "rows": 6329,
+      "sha256": "0479c6f96e44d26ba673f81bf20400e86c739cff4d02ada8b7f937f666c7c251"
+    },
+    "asa24_test_1000": {
+      "rows": 1000,
+      "sha256": "7a2ce8e38b11aeb1913b6c7a74dc0730c4be22702e069cd53a7fbf6a31202404"
+    },
+    "fpb_training_9190": {
+      "rows": 9190,
+      "sha256": "ac124dfb916a286119e343566c32dc35905d01dce049b72af9bf8c7b3ff46d7b"
+    },
+    "fpb_test_2351": {
+      "rows": 2351,
+      "sha256": "ef5d17669928b823344059f66c9df8001f2b48239bba95c2e20abee6a0f4e480"
+    },
+    "ecustfd_top_1429": {
+      "rows": 1429,
+      "sha256": "470527122f805c7f06ebcf93286fc93cb575888bb3fcc7c72f4e9ffb0105c96a"
+    },
+    "ecustfd_side_1441": {
+      "rows": 1441,
+      "sha256": "8f65c7e71c6cdef1e0d363a2f4a1dc93371bde646af428de80159690a4f15da6"
+    },
+    "nutritionverse_real": {
+      "rows": 889,
+      "sha256": "9107f77869cc95339e2675008993540a049e88212ab79e2d9b394eca5e98e62a"
+    },
+    "learning_curve_frame": {
+      "rows": 16542,
+      "sha256": "a4a63d342a39b0221c93b765ad672dbd36bb0ad4cd6a982131e77aa1c3b94d0e"
+    }
+  },
+  "environments": {
+    "n5k-train": "434b7860162029db4dd5fff29cd466a593f0b18ef1c100d733f565df2c4da921",
+    "qwen3vl-serve": "e6ddebe227c2a84543f97a6967c53275a3dad4d10cdf816806298f16f595d522"
+  }
+}

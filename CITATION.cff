@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or these set lists, please cite the paper."
-title: "Single-Image Food Mass Estimators Do Not Transfer Their Gram Scale Across Datasets"
+title: "Lost in Transfer, Recovered with Local Data: Image-Based Food Mass Estimation Beyond Nutrition5k"
 authors:
   - family-names: Lian
     given-names: Yongsheng

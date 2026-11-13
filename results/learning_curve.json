@@ -1,0 +1,1285 @@
+{
+  "jobs_done": "87/87",
+  "datasets": {
+    "asa24": {
+      "heldout_photos": 995,
+      "heldout_groups": 144,
+      "by_k": {
+        "0": {
+          "n_target_photos": [
+            0,
+            0,
+            0
+          ],
+          "mae": {
+            "scalar calibration": 56.26553332995414
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              55.38088133115908,
+              57.35177665260478,
+              56.06394200609855
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0496196506338924
+          },
+          "within_25pct": {
+            "scalar calibration": 31.65829145728643
+          },
+          "differences": {}
+        },
+        "5": {
+          "n_target_photos": [
+            41,
+            34,
+            47
+          ],
+          "mae": {
+            "scalar calibration": 56.91553476855759,
+            "ridge, target-only": 61.013904131294616,
+            "ridge, pooled": 62.17802585459176,
+            "fine-tuned, target-only": 78.88104891002742,
+            "fine-tuned, pooled": 55.854767741422854
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              56.5711260654063,
+              57.42748558311128,
+              56.747992657155194
+            ],
+            "ridge, target-only": [
+              59.40915943146038,
+              56.61017497964197,
+              67.02237798278149
+            ],
+            "ridge, pooled": [
+              67.47660913951226,
+              56.63085948166928,
+              62.42660894259372
+            ],
+            "fine-tuned, target-only": [
+              78.90414216647781,
+              89.9183060500077,
+              67.82069851359672
+            ],
+            "fine-tuned, pooled": [
+              54.37367491887077,
+              55.729538096822594,
+              57.461090208575214
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0706563922964292,
+            "ridge, target-only": 1.004909085397931,
+            "ridge, pooled": 1.1101476584292145,
+            "fine-tuned, target-only": 1.2988847156697927,
+            "fine-tuned, pooled": 1.0785870653239276
+          },
+          "within_25pct": {
+            "scalar calibration": 31.792294807370187,
+            "ridge, target-only": 28.34170854271357,
+            "ridge, pooled": 30.284757118927974,
+            "fine-tuned, target-only": 28.77721943048576,
+            "fine-tuned, pooled": 33.869346733668344
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -1.0607670271347303,
+              -3.250018767028601,
+              1.247271799688505
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              21.96551414146983,
+              11.922492139152961,
+              34.97863977479277
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              23.026281168604562,
+              13.44511118136152,
+              35.61096639112506
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              -6.323258113168894,
+              -15.629333795824186,
+              1.409725852746393
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              17.8671447787328,
+              5.376210930237431,
+              33.612825989754135
+            ],
+            "ridge, pooled minus scalar calibration": [
+              5.262491086034163,
+              -2.397363301930328,
+              14.815391261259414
+            ]
+          }
+        },
+        "10": {
+          "n_target_photos": [
+            75,
+            59,
+            93
+          ],
+          "mae": {
+            "scalar calibration": 56.478668074908576,
+            "ridge, target-only": 59.2367329760959,
+            "ridge, pooled": 56.666005976199,
+            "fine-tuned, target-only": 79.12239671508307,
+            "fine-tuned, pooled": 58.49022168529086
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              54.9336571649263,
+              58.278213655902604,
+              56.22413340389681
+            ],
+            "ridge, target-only": [
+              58.0826705275142,
+              55.943481969990515,
+              63.68404643078297
+            ],
+            "ridge, pooled": [
+              56.59525550754955,
+              54.79350110300162,
+              58.609261318045846
+            ],
+            "fine-tuned, target-only": [
+              81.76742419126086,
+              89.53698268885225,
+              66.06278326513609
+            ],
+            "fine-tuned, pooled": [
+              56.06030371991548,
+              58.990583752450284,
+              60.419777583506814
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0700136147319637,
+            "ridge, target-only": 1.0411458599513346,
+            "ridge, pooled": 1.1074139130403615,
+            "fine-tuned, target-only": 1.2868136412813689,
+            "fine-tuned, pooled": 1.1380334968846226
+          },
+          "within_25pct": {
+            "scalar calibration": 31.792294807370187,
+            "ridge, target-only": 30.150753768844226,
+            "ridge, pooled": 30.88777219430486,
+            "fine-tuned, target-only": 29.98324958123953,
+            "fine-tuned, pooled": 32.8643216080402
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              2.011553610382285,
+              -1.3849260504463041,
+              5.578442873699521
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              22.643728640174494,
+              12.064057090729548,
+              36.756511807616015
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              20.63217502979221,
+              11.353172143931294,
+              33.06511177386745
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              1.8242157090918591,
+              -5.238835898582168,
+              9.014258029397753
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              19.885663738987173,
+              7.963375154697192,
+              35.411465037213574
+            ],
+            "ridge, pooled minus scalar calibration": [
+              0.18733790129042713,
+              -5.214464794126105,
+              6.300970305038499
+            ]
+          }
+        },
+        "25": {
+          "n_target_photos": [
+            184,
+            188,
+            180
+          ],
+          "mae": {
+            "scalar calibration": 56.78469876102501,
+            "ridge, target-only": 52.82698687513233,
+            "ridge, pooled": 50.69491036965751,
+            "fine-tuned, target-only": 67.17101503845561,
+            "fine-tuned, pooled": 52.71864747313879
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              54.777687266885295,
+              58.74667486282511,
+              56.82973415336461
+            ],
+            "ridge, target-only": [
+              51.074016866201084,
+              49.95748158286529,
+              57.44946217633062
+            ],
+            "ridge, pooled": [
+              49.6770798071199,
+              49.76150586462864,
+              52.646145437223986
+            ],
+            "fine-tuned, target-only": [
+              71.48302543139647,
+              61.497006108592565,
+              68.53301357537778
+            ],
+            "fine-tuned, pooled": [
+              51.60310135746694,
+              49.924284566728275,
+              56.62855649522114
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0869154932432394,
+            "ridge, target-only": 1.0881294986266854,
+            "ridge, pooled": 1.1233259939354494,
+            "fine-tuned, target-only": 1.287529939608793,
+            "fine-tuned, pooled": 1.131075712376401
+          },
+          "within_25pct": {
+            "scalar calibration": 32.629815745393635,
+            "ridge, target-only": 32.8643216080402,
+            "ridge, pooled": 32.596314907872696,
+            "fine-tuned, target-only": 31.959798994974875,
+            "fine-tuned, pooled": 36.68341708542713
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -4.066051287886219,
+              -7.259634974166779,
+              -0.8556473904833356
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              10.386316277430597,
+              1.5042272204528118,
+              21.666549367757685
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              14.452367565316818,
+              6.647227049294414,
+              25.22075282940411
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              2.023737103481283,
+              -3.995908232883339,
+              8.42476759689261
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              14.344028163323282,
+              4.219525803304615,
+              27.014098504064282
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -6.0897883913675015,
+              -11.248898796502697,
+              -1.1394008456837112
+            ]
+          }
+        },
+        "50": {
+          "n_target_photos": [
+            351,
+            371,
+            403
+          ],
+          "mae": {
+            "scalar calibration": 56.64115328034601,
+            "ridge, target-only": 49.05143512742036,
+            "ridge, pooled": 47.85882823842622,
+            "fine-tuned, target-only": 56.653019946866685,
+            "fine-tuned, pooled": 50.77309020877754
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              55.16101032907703,
+              57.579995371847005,
+              57.182454140114
+            ],
+            "ridge, target-only": [
+              50.280482199010976,
+              46.94576692027005,
+              49.92805626298006
+            ],
+            "ridge, pooled": [
+              47.28951562515697,
+              48.318915140050386,
+              47.96805395007129
+            ],
+            "fine-tuned, target-only": [
+              58.43307180178019,
+              56.862616582375374,
+              54.6633714564445
+            ],
+            "fine-tuned, pooled": [
+              51.13423717125267,
+              48.58366917922681,
+              52.60136427585312
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.148367556728357,
+            "ridge, target-only": 1.0846122526463202,
+            "ridge, pooled": 1.115775616125697,
+            "fine-tuned, target-only": 1.1799702360926116,
+            "fine-tuned, pooled": 1.0946915181674923
+          },
+          "within_25pct": {
+            "scalar calibration": 33.266331658291456,
+            "ridge, target-only": 36.415410385259634,
+            "ridge, pooled": 36.75041876046901,
+            "fine-tuned, target-only": 37.82244556113903,
+            "fine-tuned, pooled": 38.52596314907872
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -5.868063071568479,
+              -8.835150622334613,
+              -2.910009244926728
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              0.011866666520667944,
+              -6.7516698502270955,
+              8.723402148287816
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              5.879929738089148,
+              0.5487623199398461,
+              13.590815697948775
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              2.9142619703513213,
+              -2.6555810630309016,
+              9.012709914386104
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              7.6015848194463205,
+              -0.06585325459522577,
+              17.08631917060315
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -8.782325041919801,
+              -14.335737653155647,
+              -3.5823200224732705
+            ]
+          }
+        },
+        "100": {
+          "n_target_photos": [
+            708,
+            807,
+            809
+          ],
+          "mae": {
+            "scalar calibration": 56.399072418535866,
+            "ridge, target-only": 47.74085296335794,
+            "ridge, pooled": 46.82753078094249,
+            "fine-tuned, target-only": 52.33823038784507,
+            "fine-tuned, pooled": 48.02256054731398
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              54.83822815964988,
+              57.56442243039279,
+              56.79456666556492
+            ],
+            "ridge, target-only": [
+              47.48847315040372,
+              47.58171084495279,
+              48.152374894717305
+            ],
+            "ridge, pooled": [
+              45.47987562410736,
+              48.37672922815428,
+              46.62598749056583
+            ],
+            "fine-tuned, target-only": [
+              56.747575415828514,
+              50.090219350048265,
+              50.176896397658446
+            ],
+            "fine-tuned, pooled": [
+              48.42456750431294,
+              48.512836338864105,
+              47.13027779876493
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.1279624168643811,
+            "ridge, target-only": 1.0722459320088544,
+            "ridge, pooled": 1.1048617072801812,
+            "fine-tuned, target-only": 1.1240623705156307,
+            "fine-tuned, pooled": 1.1018610815527496
+          },
+          "within_25pct": {
+            "scalar calibration": 33.33333333333333,
+            "ridge, target-only": 35.74539363484088,
+            "ridge, pooled": 36.78391959798995,
+            "fine-tuned, target-only": 36.381909547738694,
+            "fine-tuned, pooled": 36.9179229480737
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -8.376511871221878,
+              -12.6714346656115,
+              -4.181208769282897
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -4.060842030690792,
+              -9.11667329132884,
+              1.0811577825768124
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              4.315669840531085,
+              1.3596616051181398,
+              7.942405876592178
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              1.1950297663714977,
+              -3.8268829195102234,
+              6.785574981057807
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              4.597377424487136,
+              -1.2380464148715724,
+              11.02067967631531
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -9.571541637593377,
+              -15.668763360109738,
+              -3.8219122183039023
+            ]
+          }
+        },
+        "250": {
+          "n_target_photos": [
+            1779,
+            1779,
+            1862
+          ],
+          "mae": {
+            "scalar calibration": 56.29407579159642,
+            "ridge, target-only": 43.53972388519297,
+            "ridge, pooled": 43.197538966821384,
+            "fine-tuned, target-only": 46.210389814385834,
+            "fine-tuned, pooled": 44.111786198888005
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              55.03415648605648,
+              57.852118376862,
+              55.99595251187079
+            ],
+            "ridge, target-only": [
+              44.93475110648332,
+              43.536528927382044,
+              42.147891621713526
+            ],
+            "ridge, pooled": [
+              43.784235769878045,
+              43.7763934082504,
+              42.031987722335685
+            ],
+            "fine-tuned, target-only": [
+              49.02476479885387,
+              46.97829837686386,
+              42.62810626743979
+            ],
+            "fine-tuned, pooled": [
+              47.21381381026776,
+              44.77549016335429,
+              40.34605462304195
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0433908194946562,
+            "ridge, target-only": 1.0486124881309542,
+            "ridge, pooled": 1.0679157755732676,
+            "fine-tuned, target-only": 1.0662293458812513,
+            "fine-tuned, pooled": 1.065513806881485
+          },
+          "within_25pct": {
+            "scalar calibration": 31.35678391959799,
+            "ridge, target-only": 38.458961474036855,
+            "ridge, pooled": 38.25795644891123,
+            "fine-tuned, target-only": 40.234505862646564,
+            "fine-tuned, pooled": 40.0
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -12.18228959270842,
+              -17.736446371753573,
+              -6.832302091549882
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -10.083685977210582,
+              -15.522147978151693,
+              -4.7136798004938685
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              2.0986036154978382,
+              0.09088788275478701,
+              4.18051063802257
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              0.9142472320666212,
+              -5.214108869783127,
+              6.9002116316661395
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              2.6706659291928743,
+              -3.5973020712451063,
+              9.054585585009638
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -13.096536824775042,
+              -20.351225150865023,
+              -6.084113075517631
+            ]
+          }
+        },
+        "all": {
+          "n_target_photos": [
+            4104,
+            4104,
+            4104
+          ],
+          "mae": {
+            "scalar calibration": 56.26508309285451,
+            "ridge, target-only": 39.49595012535769,
+            "ridge, pooled": 40.33628943265529,
+            "fine-tuned, target-only": 39.17037730808695,
+            "fine-tuned, pooled": 39.374404326600335
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              54.79789858258505,
+              57.79055552360006,
+              56.20679517237842
+            ],
+            "ridge, target-only": [
+              39.49595012535769,
+              39.49595012535769,
+              39.49595012535769
+            ],
+            "ridge, pooled": [
+              40.33628943265529,
+              40.33628943265529,
+              40.33628943265529
+            ],
+            "fine-tuned, target-only": [
+              39.458370047691446,
+              39.35216606866515,
+              38.70059580790426
+            ],
+            "fine-tuned, pooled": [
+              39.28417667873823,
+              39.55230777912695,
+              39.28672852193584
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0509834707563566,
+            "ridge, target-only": 1.0333052482348926,
+            "ridge, pooled": 1.048327644914862,
+            "fine-tuned, target-only": 1.0391227033067003,
+            "fine-tuned, pooled": 1.0395908953036679
+          },
+          "within_25pct": {
+            "scalar calibration": 32.026800670016755,
+            "ridge, target-only": 44.020100502512555,
+            "ridge, pooled": 40.20100502512563,
+            "fine-tuned, target-only": 44.95812395309882,
+            "fine-tuned, pooled": 43.0820770519263
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -16.890678766254176,
+              -23.395145863351864,
+              -10.664930484811359
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -17.09470578476756,
+              -24.04229159472764,
+              -10.859723961830712
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              -0.204027018513384,
+              -2.038876442382632,
+              1.70633334862516
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              -0.9618851060549524,
+              -7.29076734545104,
+              5.214044105136831
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              -0.3255728172707356,
+              -6.83554854447939,
+              5.823994619037595
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -15.928793660199224,
+              -24.428588794125368,
+              -7.967416206163625
+            ]
+          }
+        }
+      },
+      "retraining_beats_calibration_from_k": "25"
+    },
+    "fpb": {
+      "heldout_photos": 1901,
+      "heldout_groups": 192,
+      "by_k": {
+        "0": {
+          "n_target_photos": [
+            0,
+            0,
+            0
+          ],
+          "mae": {
+            "scalar calibration": 217.18086185223078
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              216.69404698205756,
+              217.30238152004208,
+              217.54615705459264
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 0.22494312470071046
+          },
+          "within_25pct": {
+            "scalar calibration": 4.839558127301421
+          },
+          "differences": {}
+        },
+        "5": {
+          "n_target_photos": [
+            35,
+            34,
+            55
+          ],
+          "mae": {
+            "scalar calibration": 183.4867002377589,
+            "ridge, target-only": 166.45913739416534,
+            "ridge, pooled": 131.07877376011908,
+            "fine-tuned, target-only": 173.80197366566367,
+            "fine-tuned, pooled": 156.40348631789618
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              166.6756431627231,
+              205.28597292851558,
+              178.49848462203803
+            ],
+            "ridge, target-only": [
+              162.99710396006793,
+              177.8119918714583,
+              158.56831635096972
+            ],
+            "ridge, pooled": [
+              145.61225999864814,
+              129.39531130427918,
+              118.22874997742997
+            ],
+            "fine-tuned, target-only": [
+              164.98579848741923,
+              191.16505677804494,
+              165.25506573152674
+            ],
+            "fine-tuned, pooled": [
+              154.4977135340492,
+              166.39453602687846,
+              148.3182093927609
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.1190271353062369,
+            "ridge, target-only": 1.3219424445147598,
+            "ridge, pooled": 1.0013366306344198,
+            "fine-tuned, target-only": 1.213149237497437,
+            "fine-tuned, pooled": 0.9812747356378204
+          },
+          "within_25pct": {
+            "scalar calibration": 21.620199894792215,
+            "ridge, target-only": 22.707347010345433,
+            "ridge, pooled": 28.984744871120466,
+            "fine-tuned, target-only": 21.532526740312118,
+            "fine-tuned, pooled": 23.741890233210594
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -27.08321391986271,
+              -41.196170396886124,
+              -13.310888698468869
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -9.684726572095242,
+              -25.478193936403237,
+              6.076354936226586
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              17.398487347767468,
+              9.074021702401174,
+              25.79451100934519
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              25.32471255777709,
+              18.750279614415664,
+              32.43901458048802
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              7.34283627149832,
+              1.8181080460790053,
+              12.571075866226694
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -52.40792647763979,
+              -64.13666706063411,
+              -41.91952323590127
+            ]
+          }
+        },
+        "10": {
+          "n_target_photos": [
+            72,
+            77,
+            82
+          ],
+          "mae": {
+            "scalar calibration": 173.64365440008177,
+            "ridge, target-only": 143.68645249103824,
+            "ridge, pooled": 146.94842132020267,
+            "fine-tuned, target-only": 177.70358611274548,
+            "fine-tuned, pooled": 148.3577744354947
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              169.8975232020109,
+              172.57490447167606,
+              178.45853552655842
+            ],
+            "ridge, target-only": [
+              162.69152288847116,
+              148.46537539983584,
+              119.90245918480771
+            ],
+            "ridge, pooled": [
+              152.2994905404985,
+              182.77323933269523,
+              105.77253408741414
+            ],
+            "fine-tuned, target-only": [
+              167.51446261190156,
+              191.22271516397157,
+              174.37358056236337
+            ],
+            "fine-tuned, pooled": [
+              160.07564955587597,
+              152.9991787562589,
+              131.9984949943492
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 0.9566106974965802,
+            "ridge, target-only": 1.043879998203419,
+            "ridge, pooled": 0.9440510111088584,
+            "fine-tuned, target-only": 1.1199833210730996,
+            "fine-tuned, pooled": 0.9022500786213528
+          },
+          "within_25pct": {
+            "scalar calibration": 21.059091706119585,
+            "ridge, target-only": 27.28388567420656,
+            "ridge, pooled": 27.880063124671224,
+            "fine-tuned, target-only": 19.91934069787831,
+            "fine-tuned, pooled": 24.758898825179728
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -25.285879964587096,
+              -36.417997349974556,
+              -14.994353122220803
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              4.0599317126637064,
+              -10.894767673013902,
+              18.440061191067013
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              29.345811677250804,
+              19.165240682871907,
+              39.26388841186514
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              1.4093531152920524,
+              -10.553755772907465,
+              13.242233308037855
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              34.01713362170725,
+              25.35309567705749,
+              42.82144981501811
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -26.69523307987915,
+              -40.990161238166,
+              -13.038043804747062
+            ]
+          }
+        },
+        "25": {
+          "n_target_photos": [
+            228,
+            232,
+            211
+          ],
+          "mae": {
+            "scalar calibration": 167.11862536208463,
+            "ridge, target-only": 117.07595770995557,
+            "ridge, pooled": 104.54939658440249,
+            "fine-tuned, target-only": 142.99049219802848,
+            "fine-tuned, pooled": 120.7871184953682
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              169.07030110631666,
+              167.2193029928657,
+              165.0662719870716
+            ],
+            "ridge, target-only": [
+              121.35410448981342,
+              112.28730893974908,
+              117.58645970030422
+            ],
+            "ridge, pooled": [
+              101.78689792982755,
+              103.52423212002864,
+              108.3370597033513
+            ],
+            "fine-tuned, target-only": [
+              134.88330773221352,
+              153.4389384878025,
+              140.64923037406942
+            ],
+            "fine-tuned, pooled": [
+              115.24712120998862,
+              117.93205655199657,
+              129.18217772411944
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 0.9869900005140776,
+            "ridge, target-only": 1.0959207537027078,
+            "ridge, pooled": 1.0351062167540346,
+            "fine-tuned, target-only": 1.2356410712114254,
+            "fine-tuned, pooled": 1.0214537346806434
+          },
+          "within_25pct": {
+            "scalar calibration": 20.077152375942486,
+            "ridge, target-only": 30.264772926529897,
+            "ridge, pooled": 35.262142731895494,
+            "fine-tuned, target-only": 23.26845519901806,
+            "fine-tuned, pooled": 29.265298965456775
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -46.33150686671643,
+              -59.75674571215786,
+              -33.92659150516546
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -24.12813316405617,
+              -40.008741921193355,
+              -7.883342807417345
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              22.20337370266026,
+              13.715563597419699,
+              30.28405508725612
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              16.237721910965707,
+              7.628716225458066,
+              25.20061040909381
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              25.914534488072896,
+              17.80112328527784,
+              34.11938384946526
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -62.569228777682135,
+              -76.45363927688834,
+              -49.364514747660934
+            ]
+          }
+        },
+        "50": {
+          "n_target_photos": [
+            473,
+            459,
+            484
+          ],
+          "mae": {
+            "scalar calibration": 166.60374635552301,
+            "ridge, target-only": 104.61329989028057,
+            "ridge, pooled": 99.3376943623684,
+            "fine-tuned, target-only": 127.3849458170834,
+            "fine-tuned, pooled": 111.97663572318568
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              167.70126059537176,
+              165.30188499941048,
+              166.8080934717868
+            ],
+            "ridge, target-only": [
+              100.00814036039104,
+              112.34269381055174,
+              101.489065499899
+            ],
+            "ridge, pooled": [
+              95.82094937168677,
+              104.87367418409185,
+              97.31845953132658
+            ],
+            "fine-tuned, target-only": [
+              111.10032878414052,
+              136.45793945715698,
+              134.59656920995272
+            ],
+            "fine-tuned, pooled": [
+              104.23809762242054,
+              109.31759768668988,
+              122.37421186044661
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 0.9685355329752773,
+            "ridge, target-only": 1.0571133761084857,
+            "ridge, pooled": 1.0365915145838387,
+            "fine-tuned, target-only": 1.124906801050656,
+            "fine-tuned, pooled": 1.0298332381224704
+          },
+          "within_25pct": {
+            "scalar calibration": 20.112221637734525,
+            "ridge, target-only": 34.034718569174125,
+            "ridge, pooled": 37.7695949500263,
+            "fine-tuned, target-only": 26.863054532702087,
+            "fine-tuned, pooled": 32.96510608451692
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -54.62711063233733,
+              -67.86567788486846,
+              -42.14995682771381
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -39.218800538439595,
+              -53.78424095597633,
+              -24.785481529250973
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              15.408310093897734,
+              7.934951845871145,
+              22.112155190980165
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              12.638941360817265,
+              4.430375603628534,
+              22.27920606645691
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              22.771645926802822,
+              13.869912399962427,
+              33.165123236444245
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -67.26605199315459,
+              -84.2552581523919,
+              -51.91617374800691
+            ]
+          }
+        },
+        "100": {
+          "n_target_photos": [
+            946,
+            978,
+            1004
+          ],
+          "mae": {
+            "scalar calibration": 165.75404511719063,
+            "ridge, target-only": 90.60293172824831,
+            "ridge, pooled": 90.86518903166143,
+            "fine-tuned, target-only": 107.82573023610964,
+            "fine-tuned, pooled": 101.24501682928361
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              168.4029520860374,
+              166.17732272606753,
+              162.68186053946695
+            ],
+            "ridge, target-only": [
+              88.81552650902198,
+              93.40001698031944,
+              89.5932516954035
+            ],
+            "ridge, pooled": [
+              86.2487373089189,
+              90.69880383470958,
+              95.64802595135579
+            ],
+            "fine-tuned, target-only": [
+              105.45460198553695,
+              112.4720038771477,
+              105.55058484564431
+            ],
+            "fine-tuned, pooled": [
+              97.15527513286735,
+              105.66632412101123,
+              100.91345123397224
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 0.9473410586275705,
+            "ridge, target-only": 1.0176243129425455,
+            "ridge, pooled": 1.0100695559692925,
+            "fine-tuned, target-only": 1.067112675476736,
+            "fine-tuned, pooled": 1.0098916330445518
+          },
+          "within_25pct": {
+            "scalar calibration": 19.84920217429423,
+            "ridge, target-only": 39.9088199193407,
+            "ridge, pooled": 41.59214448535858,
+            "fine-tuned, target-only": 31.755216552691568,
+            "fine-tuned, pooled": 35.59530071891987
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -64.509028287907,
+              -79.67875570118481,
+              -50.62547636546977
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -57.92831488108098,
+              -72.38145197078389,
+              -43.61942972041812
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              6.58071340682604,
+              2.3695043546771313,
+              10.413775636444266
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              10.379827797622182,
+              0.7941132179745618,
+              21.83251375153107
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              17.22279850786134,
+              7.621381645073137,
+              28.7920245604657
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -74.88885608552918,
+              -95.67551709434521,
+              -57.75585731015602
+            ]
+          }
+        },
+        "250": {
+          "n_target_photos": [
+            2288,
+            2351,
+            2381
+          ],
+          "mae": {
+            "scalar calibration": 168.01083545028692,
+            "ridge, target-only": 81.50895041461594,
+            "ridge, pooled": 79.94212468072725,
+            "fine-tuned, target-only": 85.23617469287599,
+            "fine-tuned, pooled": 83.71872377371645
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              171.24838507575416,
+              167.19500768690656,
+              165.58911358820006
+            ],
+            "ridge, target-only": [
+              81.99232492037157,
+              82.18168222453134,
+              80.35284409894491
+            ],
+            "ridge, pooled": [
+              79.34329659995183,
+              80.795531939997,
+              79.68754550223292
+            ],
+            "fine-tuned, target-only": [
+              84.74978763300963,
+              84.94800585734797,
+              86.01073058827038
+            ],
+            "fine-tuned, pooled": [
+              82.08517509716013,
+              84.0210028671224,
+              85.04999335686682
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0099841134574359,
+            "ridge, target-only": 1.0447588090099194,
+            "ridge, pooled": 1.0470896660821962,
+            "fine-tuned, target-only": 1.0550048434063366,
+            "fine-tuned, pooled": 1.0341140264824888
+          },
+          "within_25pct": {
+            "scalar calibration": 19.866736805190254,
+            "ridge, target-only": 45.48483254427495,
+            "ridge, pooled": 46.431702612660004,
+            "fine-tuned, target-only": 42.030510257759076,
+            "fine-tuned, pooled": 43.012449587936175
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -84.29211167657047,
+              -100.68762456624454,
+              -69.87898430091182
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -82.77466075741093,
+              -99.26602701915583,
+              -68.2245300699575
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              1.5174509191595509,
+              -1.3099536454010128,
+              4.197444354270881
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              3.7765990929891937,
+              -3.3594029721403316,
+              11.753788036373004
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              3.72722427826006,
+              -3.010410631694971,
+              11.347643197683668
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -88.06871076955967,
+              -107.88933480471698,
+              -71.72774639003573
+            ]
+          }
+        },
+        "all": {
+          "n_target_photos": [
+            7289,
+            7289,
+            7289
+          ],
+          "mae": {
+            "scalar calibration": 167.95007480466612,
+            "ridge, target-only": 70.14154666833377,
+            "ridge, pooled": 71.30697323202436,
+            "fine-tuned, target-only": 73.80986186044893,
+            "fine-tuned, pooled": 58.248982818226345
+          },
+          "mae_by_draw": {
+            "scalar calibration": [
+              173.4399508678817,
+              165.80633824215923,
+              164.60393530395748
+            ],
+            "ridge, target-only": [
+              70.14154666833377,
+              70.14154666833377,
+              70.14154666833377
+            ],
+            "ridge, pooled": [
+              71.30697323202436,
+              71.30697323202436,
+              71.30697323202436
+            ],
+            "fine-tuned, target-only": [
+              57.01175846582173,
+              105.78626621109738,
+              58.63156090442768
+            ],
+            "fine-tuned, pooled": [
+              57.39961603233759,
+              57.51781632242154,
+              59.829516099919914
+            ]
+          },
+          "scale_ratio": {
+            "scalar calibration": 1.0065161750803724,
+            "ridge, target-only": 1.0086731871388046,
+            "ridge, pooled": 1.0140978794517848,
+            "fine-tuned, target-only": 1.0253713393160528,
+            "fine-tuned, pooled": 1.0269464018269794
+          },
+          "within_25pct": {
+            "scalar calibration": 19.866736805190254,
+            "ridge, target-only": 51.39400315623356,
+            "ridge, pooled": 49.76328248290373,
+            "fine-tuned, target-only": 50.83289496756094,
+            "fine-tuned, pooled": 56.864807995791686
+          },
+          "differences": {
+            "fine-tuned, pooled minus scalar calibration": [
+              -109.70109198643979,
+              -130.6125976529541,
+              -91.59489026097465
+            ],
+            "fine-tuned, target-only minus scalar calibration": [
+              -94.1402129442172,
+              -112.79344366815504,
+              -78.0262241712544
+            ],
+            "fine-tuned, target-only minus fine-tuned, pooled": [
+              15.560879042222588,
+              11.234501293952095,
+              20.51712099222764
+            ],
+            "fine-tuned, pooled minus ridge, pooled": [
+              -13.057990413798022,
+              -19.268381805845756,
+              -6.970061112986562
+            ],
+            "fine-tuned, target-only minus ridge, target-only": [
+              3.6683151921151524,
+              -3.5447086705358752,
+              11.437505727334795
+            ],
+            "ridge, pooled minus scalar calibration": [
+              -96.64310157264175,
+              -117.38854276017936,
+              -79.41492579649858
+            ]
+          }
+        }
+      },
+      "retraining_beats_calibration_from_k": "5"
+    }
+  }
+}

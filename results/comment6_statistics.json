@@ -1,0 +1,206 @@
+{
+  "ASA24 test (food series)": {
+    "photos": 1000,
+    "groups": 162,
+    "photos_per_group": {
+      "median": 6.0,
+      "min": 1,
+      "max": 27
+    },
+    "Qwen, single prompt": {
+      "mae_photo_weighted": 72.92971204,
+      "ci_photo_weighted": [
+        62.858372932829056,
+        83.33355408119057
+      ],
+      "mae_group_weighted": 65.58723641414248,
+      "ci_group_weighted": [
+        56.75452771102001,
+        74.74685142246243
+      ]
+    },
+    "DINOv2-base, Nutrition5k only": {
+      "mae_photo_weighted": 67.905422171,
+      "ci_photo_weighted": [
+        57.96740852916851,
+        78.22657161819595
+      ],
+      "mae_group_weighted": 64.95818176889654,
+      "ci_group_weighted": [
+        55.367516970422884,
+        75.31424304845018
+      ]
+    },
+    "DINOv2-large, multi-domain": {
+      "mae_photo_weighted": 41.975128623,
+      "ci_photo_weighted": [
+        35.941397036568155,
+        48.656550258338
+      ],
+      "mae_group_weighted": 38.92028919924082,
+      "ci_group_weighted": [
+        33.076545600054516,
+        45.12245305274201
+      ]
+    },
+    "DINOv2-base, three-domain": {
+      "mae_photo_weighted": 47.0947240705,
+      "ci_photo_weighted": [
+        40.01661435342787,
+        54.800399070980625
+      ],
+      "mae_group_weighted": 44.05991584240308,
+      "ci_group_weighted": [
+        37.12920185378546,
+        51.67087741968658
+      ]
+    }
+  },
+  "ECUSTFD top (objects)": {
+    "photos": 1429,
+    "groups": 146,
+    "photos_per_group": {
+      "median": 8.0,
+      "min": 2,
+      "max": 34
+    },
+    "Qwen, single prompt": {
+      "mae_photo_weighted": 40.545136459062284,
+      "ci_photo_weighted": [
+        34.125451812096024,
+        47.49722263238784
+      ],
+      "mae_group_weighted": 38.10709595338647,
+      "ci_group_weighted": [
+        32.86263263525258,
+        43.944252061809735
+      ]
+    },
+    "DINOv2-base, Nutrition5k only": {
+      "mae_photo_weighted": 44.7021537676697,
+      "ci_photo_weighted": [
+        38.695970863593125,
+        51.1286086230282
+      ],
+      "mae_group_weighted": 45.74850779923629,
+      "ci_group_weighted": [
+        40.53412769925263,
+        51.30109790643817
+      ]
+    },
+    "DINOv2-large, multi-domain": {
+      "mae_photo_weighted": 35.975448097970606,
+      "ci_photo_weighted": [
+        31.32423737140348,
+        41.30713980714274
+      ],
+      "mae_group_weighted": 37.14760496148572,
+      "ci_group_weighted": [
+        32.79943741302438,
+        41.899203576793994
+      ]
+    }
+  },
+  "ECUSTFD side (objects)": {
+    "photos": 1441,
+    "groups": 146,
+    "photos_per_group": {
+      "median": 8.0,
+      "min": 2,
+      "max": 34
+    },
+    "Qwen, single prompt": {
+      "mae_photo_weighted": 40.24857737682165,
+      "ci_photo_weighted": [
+        34.71510103145039,
+        46.06060316970248
+      ],
+      "mae_group_weighted": 38.91755456144036,
+      "ci_group_weighted": [
+        34.17328025639993,
+        43.76576520593908
+      ]
+    },
+    "DINOv2-base, Nutrition5k only": {
+      "mae_photo_weighted": 55.001134485773754,
+      "ci_photo_weighted": [
+        45.16499381336798,
+        65.20119758787614
+      ],
+      "mae_group_weighted": 51.65319557982355,
+      "ci_group_weighted": [
+        44.197000173605126,
+        59.59174077163767
+      ]
+    },
+    "DINOv2-large, multi-domain": {
+      "mae_photo_weighted": 48.33876750451076,
+      "ci_photo_weighted": [
+        40.191101985047446,
+        56.721185996175734
+      ],
+      "mae_group_weighted": 45.156141650733154,
+      "ci_group_weighted": [
+        39.10139185478677,
+        51.54280281907847
+      ]
+    }
+  },
+  "FPB test (trays)": {
+    "photos": 2034,
+    "groups": 411,
+    "photos_per_group": {
+      "median": 5.0,
+      "min": 1,
+      "max": 18
+    },
+    "Qwen, single prompt": {
+      "mae_photo_weighted": 248.51843657866274,
+      "ci_photo_weighted": [
+        224.97867202702238,
+        273.66202484085676
+      ],
+      "mae_group_weighted": 272.4584510714252,
+      "ci_group_weighted": [
+        250.502538826012,
+        294.9810521389802
+      ]
+    },
+    "DINOv2-base, Nutrition5k only": {
+      "mae_photo_weighted": 467.53402050147486,
+      "ci_photo_weighted": [
+        429.35184055316614,
+        507.73067665326806
+      ],
+      "mae_group_weighted": 529.024830921074,
+      "ci_group_weighted": [
+        497.0985341793526,
+        560.9137568488347
+      ]
+    },
+    "DINOv2-base, three-domain": {
+      "mae_photo_weighted": 161.69480883677485,
+      "ci_photo_weighted": [
+        145.9844925586754,
+        178.31491058547604
+      ],
+      "mae_group_weighted": 175.8584877236583,
+      "ci_group_weighted": [
+        162.20715607079657,
+        189.87005493967777
+      ]
+    },
+    "DINOv2-large, multi-domain": {
+      "mae_photo_weighted": 463.5911992991642,
+      "ci_photo_weighted": [
+        425.99511540010315,
+        503.41684261022823
+      ],
+      "mae_group_weighted": 521.448116113334,
+      "ci_group_weighted": [
+        489.8432618965329,
+        552.9180396235575
+      ]
+    }
+  }
+}

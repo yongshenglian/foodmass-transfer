@@ -32,6 +32,7 @@ def main():
         raise SystemExit(f"refusing to overwrite {args.output}")
     config = json.loads((args.run_dir / "config.json").read_text())
     zero = set(filter(None, config.get("zero_side", "").split(",")))
+    ft.PREPROC = config.get("preprocess", "stretch")
     if args.qwen_csv is None and not {"qwen", "conf"} <= zero:
         raise SystemExit("this run uses Qwen inputs; pass --qwen-csv")
     from concurrent.futures import ThreadPoolExecutor

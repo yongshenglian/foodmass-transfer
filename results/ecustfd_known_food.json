@@ -1,0 +1,653 @@
+{
+  "mass_spread_by_type": [
+    {
+      "type": "apple",
+      "count": 19,
+      "min": 212.5,
+      "max": 325.0,
+      "std": 27.8
+    },
+    {
+      "type": "banana",
+      "count": 15,
+      "min": 117.1,
+      "max": 183.5,
+      "std": 16.8
+    },
+    {
+      "type": "bread",
+      "count": 7,
+      "min": 26.0,
+      "max": 33.0,
+      "std": 2.4
+    },
+    {
+      "type": "bun",
+      "count": 8,
+      "min": 69.1,
+      "max": 93.6,
+      "std": 9.3
+    },
+    {
+      "type": "doughnut",
+      "count": 9,
+      "min": 49.0,
+      "max": 67.1,
+      "std": 7.4
+    },
+    {
+      "type": "egg",
+      "count": 7,
+      "min": 54.5,
+      "max": 68.9,
+      "std": 4.7
+    },
+    {
+      "type": "fired_dough_twist",
+      "count": 7,
+      "min": 37.8,
+      "max": 45.9,
+      "std": 3.2
+    },
+    {
+      "type": "grape",
+      "count": 2,
+      "min": 219.5,
+      "max": 448.0,
+      "std": 161.6
+    },
+    {
+      "type": "lemon",
+      "count": 4,
+      "min": 90.1,
+      "max": 97.5,
+      "std": 3.1
+    },
+    {
+      "type": "litchi",
+      "count": 5,
+      "min": 38.4,
+      "max": 51.5,
+      "std": 5.4
+    },
+    {
+      "type": "mango",
+      "count": 10,
+      "min": 55.1,
+      "max": 203.0,
+      "std": 52.2
+    },
+    {
+      "type": "mooncake",
+      "count": 6,
+      "min": 39.9,
+      "max": 126.0,
+      "std": 33.7
+    },
+    {
+      "type": "orange",
+      "count": 15,
+      "min": 138.9,
+      "max": 234.0,
+      "std": 28.0
+    },
+    {
+      "type": "peach",
+      "count": 5,
+      "min": 96.2,
+      "max": 158.5,
+      "std": 25.0
+    },
+    {
+      "type": "pear",
+      "count": 6,
+      "min": 197.5,
+      "max": 280.0,
+      "std": 33.7
+    },
+    {
+      "type": "plum",
+      "count": 4,
+      "min": 90.7,
+      "max": 151.8,
+      "std": 26.7
+    },
+    {
+      "type": "qiwi",
+      "count": 8,
+      "min": 52.1,
+      "max": 196.0,
+      "std": 43.8
+    },
+    {
+      "type": "sachima",
+      "count": 5,
+      "min": 29.0,
+      "max": 37.6,
+      "std": 3.1
+    },
+    {
+      "type": "tomato",
+      "count": 4,
+      "min": 154.2,
+      "max": 214.5,
+      "std": 25.3
+    }
+  ],
+  "DINOv2-base, Nutrition5k only": {
+    "top -> top": {
+      "all": {
+        "n_photos_per_draw": 1178.7,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 44.7076343060151,
+          "calibrated": 24.446468621530702,
+          "constant": 26.782790362263512,
+          "pixel_area": 67.60778625229293,
+          "coin_area": 74.71008414498377
+        },
+        "calibrated_minus_uncalibrated": [
+          -20.2611656844844,
+          -30.56884402036249,
+          -9.952329023470192
+        ],
+        "calibrated_minus_constant": [
+          -2.33632174073281,
+          -8.791269267137697,
+          3.048604701931681
+        ],
+        "calibrated_minus_pixel_area": [
+          -43.16131763076223,
+          -74.17874181385616,
+          -15.07584498887533
+        ],
+        "calibrated_minus_coin_area": [
+          -50.26361552345307,
+          -131.93616901868097,
+          -0.5281974614687657
+        ]
+      },
+      "distance changed >25%": {
+        "n_photos_per_draw": 128.7,
+        "n_types": 18,
+        "mae": {
+          "uncalibrated": 50.48401568142968,
+          "calibrated": 41.655791480457474,
+          "constant": 31.051515151515154,
+          "pixel_area": 137.94210307055377,
+          "coin_area": 172.39467603406106
+        },
+        "calibrated_minus_uncalibrated": [
+          -8.828224200972208,
+          -26.475109213966054,
+          9.044818167378187
+        ],
+        "calibrated_minus_constant": [
+          10.60427632894232,
+          -1.6017597241120658,
+          21.022434284757598
+        ],
+        "calibrated_minus_pixel_area": [
+          -96.28631159009629,
+          -174.613939518006,
+          -25.081009379702923
+        ],
+        "calibrated_minus_coin_area": [
+          -130.73888455360358,
+          -382.4782087636407,
+          16.774684474339633
+        ]
+      },
+      "distance within 25%": {
+        "n_photos_per_draw": 1050.0,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 43.99961498885714,
+          "calibrated": 22.33709733396511,
+          "constant": 26.259566666666668,
+          "pixel_area": 58.98680856228324,
+          "coin_area": 62.73674416772257
+        },
+        "calibrated_minus_uncalibrated": [
+          -21.662517654892028,
+          -31.99784165880621,
+          -11.467689653565182
+        ],
+        "calibrated_minus_constant": [
+          -3.9224693327015565,
+          -10.025745417884451,
+          1.3897385901577664
+        ],
+        "calibrated_minus_pixel_area": [
+          -36.649711228318125,
+          -64.6412139434719,
+          -12.262697209467795
+        ],
+        "calibrated_minus_coin_area": [
+          -40.39964683375746,
+          -126.91367706263209,
+          0.9946168637155087
+        ]
+      }
+    },
+    "side -> side": {
+      "all": {
+        "n_photos_per_draw": 1190.2,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 54.4151043021761,
+          "calibrated": 35.06121515222991,
+          "constant": 26.64538732986053,
+          "pixel_area": 54.90390756901738,
+          "coin_area": 3727.9369111580354
+        },
+        "calibrated_minus_uncalibrated": [
+          -19.353889149946184,
+          -33.14680597677739,
+          -7.009999178845755
+        ],
+        "calibrated_minus_constant": [
+          8.415827822369383,
+          -3.2064379973400556,
+          18.758064052546004
+        ],
+        "calibrated_minus_pixel_area": [
+          -19.842692416787465,
+          -31.501181598302868,
+          -7.607210661187847
+        ],
+        "calibrated_minus_coin_area": [
+          -3692.8756960058054,
+          -11670.642149697223,
+          0.7202957569368325
+        ]
+      },
+      "distance changed >25%": {
+        "n_photos_per_draw": 243.65,
+        "n_types": 16,
+        "mae": {
+          "uncalibrated": 58.23829042848348,
+          "calibrated": 61.89457492562295,
+          "constant": 29.770223681510362,
+          "pixel_area": 118.34874384878097,
+          "coin_area": 18060.892353392832
+        },
+        "calibrated_minus_uncalibrated": [
+          3.656284497139467,
+          -17.12244315548682,
+          26.801365372896665
+        ],
+        "calibrated_minus_constant": [
+          32.12435124411259,
+          13.046447701731697,
+          48.022278619324986
+        ],
+        "calibrated_minus_pixel_area": [
+          -56.45416892315802,
+          -91.08269105188474,
+          -11.178716330283908
+        ],
+        "calibrated_minus_coin_area": [
+          -17998.99777846721,
+          -53056.31630156101,
+          26.469461741149058
+        ]
+      },
+      "distance within 25%": {
+        "n_photos_per_draw": 946.55,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 53.430983759495014,
+          "calibrated": 28.154080707364646,
+          "constant": 25.8410279435846,
+          "pixel_area": 38.57266848015319,
+          "coin_area": 38.51258756128079
+        },
+        "calibrated_minus_uncalibrated": [
+          -25.27690305213037,
+          -40.01140252740006,
+          -12.057059367792371
+        ],
+        "calibrated_minus_constant": [
+          2.313052763780046,
+          -7.994506946579457,
+          11.632233080487813
+        ],
+        "calibrated_minus_pixel_area": [
+          -10.418587772788545,
+          -21.07051090216137,
+          -2.36420945963321
+        ],
+        "calibrated_minus_coin_area": [
+          -10.358506853916143,
+          -26.283861408282583,
+          -0.31563000350918774
+        ]
+      }
+    },
+    "top -> side": {
+      "all": {
+        "n_photos_per_draw": 1190.15,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 54.42322808263664,
+          "calibrated": 44.79275696183165,
+          "constant": 26.71677939755493,
+          "pixel_area": 66.95497486758609,
+          "coin_area": 611.3615852367215
+        },
+        "calibrated_minus_uncalibrated": [
+          -9.630471120804991,
+          -16.573040168846067,
+          -2.584504132324557
+        ],
+        "calibrated_minus_constant": [
+          18.07597756427672,
+          4.2168788720151165,
+          31.63785273194548
+        ],
+        "calibrated_minus_pixel_area": [
+          -22.16221790575444,
+          -38.491701348018246,
+          -8.106617506646637
+        ],
+        "calibrated_minus_coin_area": [
+          -566.5688282748898,
+          -1726.814002367987,
+          -8.984201946345346
+        ]
+      }
+    },
+    "side -> top": {
+      "all": {
+        "n_photos_per_draw": 1180.3,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 44.771652394137085,
+          "calibrated": 45.87527005950398,
+          "constant": 26.679911886808437,
+          "pixel_area": 100.61511566145572,
+          "coin_area": 290.83096399205095
+        },
+        "calibrated_minus_uncalibrated": [
+          1.1036176653668974,
+          -10.151732749908792,
+          11.222989425488667
+        ],
+        "calibrated_minus_constant": [
+          19.195358172695546,
+          7.558830717000514,
+          29.2436776063968
+        ],
+        "calibrated_minus_pixel_area": [
+          -54.739845601951735,
+          -100.39368921640164,
+          -23.604938386183672
+        ],
+        "calibrated_minus_coin_area": [
+          -244.95569393254698,
+          -500.40345474798175,
+          -75.63326144492139
+        ]
+      }
+    }
+  },
+  "DINOv2-large, two-domain": {
+    "top -> top": {
+      "all": {
+        "n_photos_per_draw": 1178.7,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 35.6302499117672,
+          "calibrated": 28.858276182104913,
+          "constant": 26.782790362263512,
+          "pixel_area": 67.60778625229293,
+          "coin_area": 74.71008414498377
+        },
+        "calibrated_minus_uncalibrated": [
+          -6.771973729662289,
+          -14.662478239325784,
+          -0.436530719383311
+        ],
+        "calibrated_minus_constant": [
+          2.0754858198414006,
+          -6.035833697832289,
+          8.970790301290547
+        ],
+        "calibrated_minus_pixel_area": [
+          -38.74951007018801,
+          -69.9854073769277,
+          -11.627886535399803
+        ],
+        "calibrated_minus_coin_area": [
+          -45.85180796287885,
+          -127.61472928125544,
+          4.462672789958295
+        ]
+      },
+      "distance changed >25%": {
+        "n_photos_per_draw": 128.7,
+        "n_types": 18,
+        "mae": {
+          "uncalibrated": 41.77690881934732,
+          "calibrated": 55.73639698538682,
+          "constant": 31.051515151515154,
+          "pixel_area": 137.94210307055377,
+          "coin_area": 172.39467603406106
+        },
+        "calibrated_minus_uncalibrated": [
+          13.959488166039499,
+          -1.2862993154923446,
+          26.117847385982973
+        ],
+        "calibrated_minus_constant": [
+          24.684881833871664,
+          4.06536004902848,
+          41.952263301812394
+        ],
+        "calibrated_minus_pixel_area": [
+          -82.20570608516695,
+          -158.01206011079398,
+          -18.801891245814105
+        ],
+        "calibrated_minus_coin_area": [
+          -116.65827904867425,
+          -373.84338722597715,
+          33.00956190637193
+        ]
+      },
+      "distance within 25%": {
+        "n_photos_per_draw": 1050.0,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 34.876845148523806,
+          "calibrated": 25.563786517931216,
+          "constant": 26.259566666666668,
+          "pixel_area": 58.98680856228324,
+          "coin_area": 62.73674416772257
+        },
+        "calibrated_minus_uncalibrated": [
+          -9.31305863059259,
+          -16.90862664041973,
+          -3.101016003613406
+        ],
+        "calibrated_minus_constant": [
+          -0.6957801487354516,
+          -7.663214101951115,
+          5.361027172237038
+        ],
+        "calibrated_minus_pixel_area": [
+          -33.423022044352024,
+          -61.64673455520666,
+          -9.040865986947127
+        ],
+        "calibrated_minus_coin_area": [
+          -37.17295764979136,
+          -123.65152182760605,
+          3.908868670188936
+        ]
+      }
+    },
+    "side -> side": {
+      "all": {
+        "n_photos_per_draw": 1190.2,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 47.642186658460766,
+          "calibrated": 40.970020285137075,
+          "constant": 26.64538732986053,
+          "pixel_area": 54.90390756901738,
+          "coin_area": 3727.9369111580354
+        },
+        "calibrated_minus_uncalibrated": [
+          -6.672166373323691,
+          -14.664992232921213,
+          0.9362078651537484
+        ],
+        "calibrated_minus_constant": [
+          14.324632955276545,
+          -2.830502647299237,
+          30.435769623382782
+        ],
+        "calibrated_minus_pixel_area": [
+          -13.933887283880303,
+          -23.64197771431117,
+          -5.521281231804222
+        ],
+        "calibrated_minus_coin_area": [
+          -3686.966890872898,
+          -11666.650215896952,
+          9.66137160997778
+        ]
+      },
+      "distance changed >25%": {
+        "n_photos_per_draw": 243.65,
+        "n_types": 16,
+        "mae": {
+          "uncalibrated": 52.75588893104863,
+          "calibrated": 88.90318953624896,
+          "constant": 29.770223681510362,
+          "pixel_area": 118.34874384878097,
+          "coin_area": 18060.892353392832
+        },
+        "calibrated_minus_uncalibrated": [
+          36.14730060520033,
+          5.243788120398455,
+          60.953079485502336
+        ],
+        "calibrated_minus_constant": [
+          59.1329658547386,
+          13.034655747537998,
+          95.63673942554975
+        ],
+        "calibrated_minus_pixel_area": [
+          -29.44555431253201,
+          -46.884451501167796,
+          -8.678041031068911
+        ],
+        "calibrated_minus_coin_area": [
+          -17971.989163856582,
+          -53053.163940958926,
+          67.49682284447105
+        ]
+      },
+      "distance within 25%": {
+        "n_photos_per_draw": 946.55,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 46.32587631171094,
+          "calibrated": 28.631615881742217,
+          "constant": 25.8410279435846,
+          "pixel_area": 38.57266848015319,
+          "coin_area": 38.51258756128079
+        },
+        "calibrated_minus_uncalibrated": [
+          -17.694260429968725,
+          -28.302746402271595,
+          -8.521307670537576
+        ],
+        "calibrated_minus_constant": [
+          2.7905879381576177,
+          -8.519562979462782,
+          12.606308520825136
+        ],
+        "calibrated_minus_pixel_area": [
+          -9.941052598410973,
+          -20.032357014286283,
+          -2.1007925646074446
+        ],
+        "calibrated_minus_coin_area": [
+          -9.880971679538572,
+          -26.073796029730094,
+          0.1275319101479681
+        ]
+      }
+    },
+    "top -> side": {
+      "all": {
+        "n_photos_per_draw": 1190.15,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 47.62326579372348,
+          "calibrated": 46.002017866599736,
+          "constant": 26.71677939755493,
+          "pixel_area": 66.95497486758609,
+          "coin_area": 611.3615852367215
+        },
+        "calibrated_minus_uncalibrated": [
+          -1.621247927123747,
+          -5.571780666275285,
+          1.9404936699880297
+        ],
+        "calibrated_minus_constant": [
+          19.285238469044806,
+          4.732975220970295,
+          32.95501336712669
+        ],
+        "calibrated_minus_pixel_area": [
+          -20.952957000986352,
+          -38.69776914446136,
+          -7.728170639069501
+        ],
+        "calibrated_minus_coin_area": [
+          -565.3595673701217,
+          -1726.5019032577557,
+          -8.58865815416169
+        ]
+      }
+    },
+    "side -> top": {
+      "all": {
+        "n_photos_per_draw": 1180.3,
+        "n_types": 19,
+        "mae": {
+          "uncalibrated": 35.72883530382106,
+          "calibrated": 48.87298442190188,
+          "constant": 26.679911886808437,
+          "pixel_area": 100.61511566145572,
+          "coin_area": 290.83096399205095
+        },
+        "calibrated_minus_uncalibrated": [
+          13.144149118080826,
+          3.182311328111457,
+          23.035309106005073
+        ],
+        "calibrated_minus_constant": [
+          22.193072535093446,
+          10.889497194719555,
+          32.62140473286916
+        ],
+        "calibrated_minus_pixel_area": [
+          -51.742131239553835,
+          -98.89894266846214,
+          -20.435877425013814
+        ],
+        "calibrated_minus_coin_area": [
+          -241.95797957014906,
+          -500.31552255087394,
+          -70.17709880071534
+        ]
+      }
+    }
+  }
+}

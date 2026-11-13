@@ -1,0 +1,60 @@
+{
+  "top": {
+    "n": 1429,
+    "objects": 146,
+    "mae": {
+      "base, Nutrition5k only": 44.7021537676697,
+      "large, Nutrition5k only": 45.980184634709595,
+      "large, two-domain": 35.975448097970606
+    },
+    "scale_ratio": {
+      "base, Nutrition5k only": 1.0186649487150006,
+      "large, Nutrition5k only": 0.8515788316845176,
+      "large, two-domain": 1.0966733572355547
+    },
+    "backbone: large minus base, Nutrition5k only": [
+      1.2780308670398888,
+      -2.7662836123400756,
+      5.207168571837871
+    ],
+    "ASA24 training: two-domain minus large Nutrition5k only": [
+      -10.00473653673898,
+      -14.970650549040952,
+      -5.0849426625026295
+    ],
+    "total: two-domain minus base Nutrition5k only": [
+      -8.726705669699092,
+      -12.619012422134565,
+      -4.930422095674606
+    ]
+  },
+  "side": {
+    "n": 1441,
+    "objects": 146,
+    "mae": {
+      "base, Nutrition5k only": 55.001134485773754,
+      "large, Nutrition5k only": 69.70233249514226,
+      "large, two-domain": 48.33876750451076
+    },
+    "scale_ratio": {
+      "base, Nutrition5k only": 0.7592284017012786,
+      "large, Nutrition5k only": 0.5502730693359122,
+      "large, two-domain": 0.7965312123065343
+    },
+    "backbone: large minus base, Nutrition5k only": [
+      14.701198009368493,
+      11.489231380186403,
+      17.709109149389153
+    ],
+    "ASA24 training: two-domain minus large Nutrition5k only": [
+      -21.363564990631506,
+      -26.421488952473062,
+      -16.320009107733046
+    ],
+    "total: two-domain minus base Nutrition5k only": [
+      -6.662366981263011,
+      -10.054759530946644,
+      -3.3580045779925065
+    ]
+  }
+}

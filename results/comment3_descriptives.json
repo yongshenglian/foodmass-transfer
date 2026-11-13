@@ -1,0 +1,1073 @@
+{
+  "mass_distribution": {
+    "Nutrition5k training": {
+      "n": 2253,
+      "min": 5.0,
+      "p5": 39.0,
+      "p25": 96.0,
+      "median": 186.0,
+      "p75": 315.0,
+      "p95": 510.4000000000001,
+      "max": 3051.0,
+      "below_10": 10,
+      "above_1500": 1,
+      "at_or_above_1000_pct": 0.08877052818464269
+    },
+    "Nutrition5k validation": {
+      "n": 502,
+      "min": 5.0,
+      "p5": 27.05,
+      "p25": 83.25,
+      "median": 163.0,
+      "p75": 281.25,
+      "p95": 499.4499999999999,
+      "max": 871.0,
+      "below_10": 4,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.0
+    },
+    "Nutrition5k internal test": {
+      "n": 498,
+      "min": 8.0,
+      "p5": 34.0,
+      "p25": 85.25,
+      "median": 158.0,
+      "p75": 274.75,
+      "p95": 437.29999999999995,
+      "max": 806.0,
+      "below_10": 1,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.0
+    },
+    "ASA24 training pool": {
+      "n": 6329,
+      "min": 5.0,
+      "p5": 11.821750000000003,
+      "p25": 35.5,
+      "median": 80.0,
+      "p75": 175.0,
+      "p95": 404.0,
+      "max": 1230.0,
+      "below_10": 207,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.015800284405119294
+    },
+    "ASA24 test": {
+      "n": 1000,
+      "min": 5.25,
+      "p5": 14.0,
+      "p25": 43.6875,
+      "median": 105.875,
+      "p75": 218.1875,
+      "p95": 453.6,
+      "max": 985.0,
+      "below_10": 24,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.0
+    },
+    "FPB training": {
+      "n": 9190,
+      "min": 17.0,
+      "p5": 46.6,
+      "p25": 108.0,
+      "median": 203.9,
+      "p75": 368.8,
+      "p95": 914.0,
+      "max": 1927.0,
+      "below_10": 0,
+      "above_1500": 78,
+      "at_or_above_1000_pct": 3.7976060935799785
+    },
+    "FPB test (unseen trays)": {
+      "n": 2034,
+      "min": 30.0,
+      "p5": 102.0,
+      "p25": 268.0,
+      "median": 465.7,
+      "p75": 794.5,
+      "p95": 1263.0549999999992,
+      "max": 1845.98,
+      "below_10": 0,
+      "above_1500": 20,
+      "at_or_above_1000_pct": 11.651917404129794
+    },
+    "ECUSTFD (photographs)": {
+      "n": 1429,
+      "min": 26.0,
+      "p5": 32.94,
+      "p25": 59.5,
+      "median": 105.8,
+      "p75": 197.9,
+      "p95": 272.5,
+      "max": 448.0,
+      "below_10": 0,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.0
+    },
+    "ECUSTFD (objects)": {
+      "n": 146,
+      "min": 26.0,
+      "p5": 32.75,
+      "p25": 57.0,
+      "median": 121.55,
+      "p75": 197.125,
+      "p95": 255.0,
+      "max": 448.0,
+      "below_10": 0,
+      "above_1500": 0,
+      "at_or_above_1000_pct": 0.0
+    }
+  },
+  "bounds": {
+    "Nutrition5k validation": {
+      "labels_below_10": 4,
+      "labels_above_1500": 0,
+      "Qwen, single prompt": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "at_or_below_10": 1,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-large, multi-domain": {
+        "at_or_below_10": 1,
+        "at_or_above_1500": 0
+      }
+    },
+    "ASA24 test": {
+      "labels_below_10": 24,
+      "labels_above_1500": 0,
+      "Qwen, single prompt": {
+        "at_or_below_10": 44,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "at_or_below_10": 14,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-large, multi-domain": {
+        "at_or_below_10": 12,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, three-domain": {
+        "at_or_below_10": 11,
+        "at_or_above_1500": 0
+      }
+    },
+    "ECUSTFD top": {
+      "labels_below_10": 0,
+      "labels_above_1500": 0,
+      "Qwen, single prompt": {
+        "at_or_below_10": 15,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-large, multi-domain": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      }
+    },
+    "FPB test": {
+      "labels_below_10": 0,
+      "labels_above_1500": 20,
+      "Qwen, single prompt": {
+        "at_or_below_10": 3,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-large, multi-domain": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, three-domain": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 2
+      }
+    },
+    "ECUSTFD side": {
+      "labels_below_10": 0,
+      "labels_above_1500": 0,
+      "Qwen, single prompt": {
+        "at_or_below_10": 2,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      },
+      "DINOv2-large, multi-domain": {
+        "at_or_below_10": 0,
+        "at_or_above_1500": 0
+      }
+    }
+  },
+  "by_mass_range": {
+    "Nutrition5k validation": {
+      "0-100 g": {
+        "Qwen, single prompt": {
+          "n": 156,
+          "mae": 33.65384615384615,
+          "wape": 59.631985461154024,
+          "scale_ratio": 1.3675055883133076
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 156,
+          "mae": 13.323616756410257,
+          "wape": 23.60840770104498,
+          "scale_ratio": 1.1597362090468333
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 156,
+          "mae": 12.571114711538462,
+          "wape": 22.275032882780554,
+          "scale_ratio": 1.1386498378763488
+        },
+        "n": 156
+      },
+      "100-300 g": {
+        "Qwen, single prompt": {
+          "n": 241,
+          "mae": 48.315352697095435,
+          "wape": 25.382569647294762,
+          "scale_ratio": 1.0127035097737127
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 241,
+          "mae": 21.820695066390044,
+          "wape": 11.463546913284214,
+          "scale_ratio": 0.9831234714055263
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 241,
+          "mae": 21.852759605809126,
+          "wape": 11.480392084841085,
+          "scale_ratio": 1.00865203169533
+        },
+        "n": 241
+      },
+      "300-600 g": {
+        "Qwen, single prompt": {
+          "n": 95,
+          "mae": 99.51578947368421,
+          "wape": 24.768791427598313,
+          "scale_ratio": 0.7908070344920464
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 95,
+          "mae": 44.448663578947375,
+          "wape": 11.06296481437816,
+          "scale_ratio": 0.930789925245367
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 95,
+          "mae": 38.88409989473685,
+          "wape": 9.67798341586104,
+          "scale_ratio": 0.9495931586180324
+        },
+        "n": 95
+      },
+      "600-1000 g": {
+        "Qwen, single prompt": {
+          "n": 10,
+          "mae": 394.7,
+          "wape": 53.86925071652791,
+          "scale_ratio": 0.45486694342270606
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 10,
+          "mae": 87.884673,
+          "wape": 11.994632591783814,
+          "scale_ratio": 0.8823142171056585
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 10,
+          "mae": 76.772825,
+          "wape": 10.478070833902006,
+          "scale_ratio": 0.896768971384114
+        },
+        "n": 10
+      }
+    },
+    "ASA24 test": {
+      "0-100 g": {
+        "Qwen, single prompt": {
+          "n": 479,
+          "mae": 25.090332651356995,
+          "wape": 56.82324660017204,
+          "scale_ratio": 0.9083940970801431
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 479,
+          "mae": 31.086091821503132,
+          "wape": 70.40212204254408,
+          "scale_ratio": 1.2391610254393493
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 479,
+          "mae": 21.490859206680582,
+          "wape": 48.67135120604874,
+          "scale_ratio": 1.2052131765355119
+        },
+        "DINOv2-base, three-domain": {
+          "n": 479,
+          "mae": 23.135358533402922,
+          "wape": 52.39572553279193,
+          "scale_ratio": 1.2043734937154553
+        },
+        "n": 479
+      },
+      "100-300 g": {
+        "Qwen, single prompt": {
+          "n": 376,
+          "mae": 74.75091143617021,
+          "wape": 42.77455003501875,
+          "scale_ratio": 0.6472484552698022
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 376,
+          "mae": 67.9525900412234,
+          "wape": 38.884361499851515,
+          "scale_ratio": 0.8580770650696942
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 376,
+          "mae": 45.69362642553191,
+          "wape": 26.14716358996288,
+          "scale_ratio": 0.910694484911226
+        },
+        "DINOv2-base, three-domain": {
+          "n": 376,
+          "mae": 50.01411835638298,
+          "wape": 28.619469207666153,
+          "scale_ratio": 0.8872354586831126
+        },
+        "n": 376
+      },
+      "300-600 g": {
+        "Qwen, single prompt": {
+          "n": 133,
+          "mae": 206.5063909774436,
+          "wape": 51.64276037519261,
+          "scale_ratio": 0.4414187136199843
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 133,
+          "mae": 168.39600766165415,
+          "wape": 42.11218176177318,
+          "scale_ratio": 0.5727806297467269
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 133,
+          "mae": 95.88791185714285,
+          "wape": 23.9794828212213,
+          "scale_ratio": 0.7606318087202347
+        },
+        "DINOv2-base, three-domain": {
+          "n": 133,
+          "mae": 113.04623489473686,
+          "wape": 28.270406510684264,
+          "scale_ratio": 0.7222275151263284
+        },
+        "n": 133
+      },
+      "600-1000 g": {
+        "Qwen, single prompt": {
+          "n": 12,
+          "mae": 444.9791666666667,
+          "wape": 63.104558749667625,
+          "scale_ratio": 0.3552496222622191
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 12,
+          "mae": 422.3617761666667,
+          "wape": 59.89708173841108,
+          "scale_ratio": 0.3477056408997921
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 12,
+          "mae": 145.59260416666663,
+          "wape": 20.64716223003515,
+          "scale_ratio": 0.79115327351464
+        },
+        "DINOv2-base, three-domain": {
+          "n": 12,
+          "mae": 181.03579916666664,
+          "wape": 25.67352604366709,
+          "scale_ratio": 0.7362845860136231
+        },
+        "n": 12
+      }
+    },
+    "ECUSTFD top": {
+      "0-100 g": {
+        "Qwen, single prompt": {
+          "n": 659,
+          "mae": 24.125189681335357,
+          "wape": 40.121081201121484,
+          "scale_ratio": 1.1408632323737824
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 659,
+          "mae": 32.93816070106221,
+          "wape": 54.77737740339118,
+          "scale_ratio": 1.499698263487906
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 659,
+          "mae": 29.143920081942337,
+          "wape": 48.46741516114299,
+          "scale_ratio": 1.4453643326286685
+        },
+        "n": 659
+      },
+      "100-300 g": {
+        "Qwen, single prompt": {
+          "n": 754,
+          "mae": 51.17970822281167,
+          "wape": 26.921523335661117,
+          "scale_ratio": 0.7768537726666144
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 754,
+          "mae": 51.658696633952246,
+          "wape": 27.173480569021912,
+          "scale_ratio": 0.7369720936162674
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 754,
+          "mae": 39.152326071618035,
+          "wape": 20.59488607073915,
+          "scale_ratio": 0.8726767959623165
+        },
+        "n": 754
+      },
+      "300-600 g": {
+        "Qwen, single prompt": {
+          "n": 16,
+          "mae": 215.6875,
+          "wape": 51.69263031755542,
+          "scale_ratio": 0.4845093728499715
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 16,
+          "mae": 201.404535625,
+          "wape": 48.26951123427202,
+          "scale_ratio": 0.5182156453176596
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 16,
+          "mae": 167.63863375,
+          "wape": 40.17702426602756,
+          "scale_ratio": 0.5992650865445603
+        },
+        "n": 16
+      }
+    },
+    "FPB test": {
+      "0-100 g": {
+        "Qwen, single prompt": {
+          "n": 84,
+          "mae": 95.74880952380951,
+          "wape": 131.26764701082075,
+          "scale_ratio": 1.5877075877933124
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 84,
+          "mae": 48.54898409523809,
+          "wape": 66.55864379559661,
+          "scale_ratio": 0.3724242334406955
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 84,
+          "mae": 50.037930696428575,
+          "wape": 68.5999278369865,
+          "scale_ratio": 0.35463009866374684
+        },
+        "DINOv2-base, three-domain": {
+          "n": 84,
+          "mae": 38.71364571428572,
+          "wape": 53.074802761502184,
+          "scale_ratio": 1.2901564416498421
+        },
+        "n": 84
+      },
+      "100-300 g": {
+        "Qwen, single prompt": {
+          "n": 471,
+          "mae": 100.31995753715498,
+          "wape": 51.20994574535649,
+          "scale_ratio": 0.9720243108438767
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 471,
+          "mae": 151.56110546496816,
+          "wape": 77.36681891130894,
+          "scale_ratio": 0.21071572738240257
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 471,
+          "mae": 152.4774103121019,
+          "wape": 77.8345615485658,
+          "scale_ratio": 0.20450658987374998
+        },
+        "DINOv2-base, three-domain": {
+          "n": 471,
+          "mae": 68.46965121868365,
+          "wape": 34.95144146979579,
+          "scale_ratio": 0.9712995957053261
+        },
+        "n": 471
+      },
+      "300-600 g": {
+        "Qwen, single prompt": {
+          "n": 708,
+          "mae": 142.26502825,
+          "wape": 32.926472470047614,
+          "scale_ratio": 0.6954791826086072
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 708,
+          "mae": 358.30059053531073,
+          "wape": 82.92673663643484,
+          "scale_ratio": 0.13203890106244848
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 708,
+          "mae": 356.3787515112994,
+          "wape": 82.48193737343696,
+          "scale_ratio": 0.13005381037734648
+        },
+        "DINOv2-base, three-domain": {
+          "n": 708,
+          "mae": 117.0626513418079,
+          "wape": 27.09351844294046,
+          "scale_ratio": 0.7865262347165588
+        },
+        "n": 708
+      },
+      "600-1000 g": {
+        "Qwen, single prompt": {
+          "n": 534,
+          "mae": 339.06104868913854,
+          "wape": 42.89687138989212,
+          "scale_ratio": 0.5537607360907231
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 534,
+          "mae": 672.2627602153558,
+          "wape": 85.05243901257302,
+          "scale_ratio": 0.10497502658934599
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 534,
+          "mae": 663.6887492378277,
+          "wape": 83.96768378155926,
+          "scale_ratio": 0.10519826117531196
+        },
+        "DINOv2-base, three-domain": {
+          "n": 534,
+          "mae": 213.0011979775281,
+          "wape": 26.948200127559126,
+          "scale_ratio": 0.7569313428095177
+        },
+        "n": 534
+      },
+      ">=1000 g": {
+        "Qwen, single prompt": {
+          "n": 237,
+          "mae": 710.5935021097046,
+          "wape": 56.40109571952826,
+          "scale_ratio": 0.4188425496643273
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 237,
+          "mae": 1109.0112671223628,
+          "wape": 88.02423670537175,
+          "scale_ratio": 0.0836317672257433
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 237,
+          "mae": 1097.8839863966246,
+          "wape": 87.1410442423853,
+          "scale_ratio": 0.08433828307410221
+        },
+        "DINOv2-base, three-domain": {
+          "n": 237,
+          "mae": 408.2830900421941,
+          "wape": 32.40616973525247,
+          "scale_ratio": 0.6687508708586106
+        },
+        "n": 237
+      }
+    },
+    "ECUSTFD side": {
+      "0-100 g": {
+        "Qwen, single prompt": {
+          "n": 665,
+          "mae": 29.92887218045113,
+          "wape": 50.01067922375865,
+          "scale_ratio": 1.296277197831402
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 665,
+          "mae": 17.194289645112782,
+          "wape": 28.731390168580972,
+          "scale_ratio": 1.0807704423301723
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 665,
+          "mae": 18.75873032781955,
+          "wape": 31.345546180732676,
+          "scale_ratio": 0.9885996138384446
+        },
+        "n": 665
+      },
+      "100-300 g": {
+        "Qwen, single prompt": {
+          "n": 760,
+          "mae": 46.71644736842105,
+          "wape": 24.55127003873077,
+          "scale_ratio": 0.8458726824839411
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 760,
+          "mae": 83.94511521842105,
+          "wape": 44.11635105525963,
+          "scale_ratio": 0.5650789793124769
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 760,
+          "mae": 70.58788271842106,
+          "wape": 37.09661730942504,
+          "scale_ratio": 0.6666311480572887
+        },
+        "n": 760
+      },
+      "300-600 g": {
+        "Qwen, single prompt": {
+          "n": 16,
+          "mae": 161.9375,
+          "wape": 38.81066506890353,
+          "scale_ratio": 0.6070419850004017
+        },
+        "DINOv2-base, Nutrition5k only": {
+          "n": 16,
+          "mae": 251.509038375,
+          "wape": 60.27778031755542,
+          "scale_ratio": 0.3970194865444181
+        },
+        "DINOv2-large, multi-domain": {
+          "n": 16,
+          "mae": 220.92609,
+          "wape": 52.94813421210305,
+          "scale_ratio": 0.47257859389360457
+        },
+        "n": 16
+      }
+    }
+  },
+  "fpb_photo_shapes": {
+    "test": {
+      "lab oblique": 934,
+      "smartphone": 536,
+      "lab overhead": 458,
+      "lab reference": 66,
+      "other": 40
+    }
+  },
+  "fpb_by_view": {
+    "lab overhead / several items": {
+      "n": 458,
+      "median_true_g": 656.4,
+      "Qwen, single prompt": {
+        "n": 458,
+        "mae": 304.07218340829695,
+        "wape": 43.313530797385035,
+        "scale_ratio": 0.6461630043515258
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 458,
+        "mae": 474.06952757423585,
+        "wape": 67.5287849501072,
+        "scale_ratio": 0.34565706049077294
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 458,
+        "mae": 449.83059237554585,
+        "wape": 64.0760723262282,
+        "scale_ratio": 0.37499860607502244
+      },
+      "DINOv2-base, three-domain": {
+        "n": 458,
+        "mae": 141.08310677074235,
+        "wape": 20.096568589767852,
+        "scale_ratio": 0.9619569145181504
+      }
+    },
+    "lab oblique / several items": {
+      "n": 934,
+      "median_true_g": 625.3,
+      "Qwen, single prompt": {
+        "n": 934,
+        "mae": 306.1550749464668,
+        "wape": 45.15208918040391,
+        "scale_ratio": 0.6266471509241871
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 934,
+        "mae": 631.6083670717345,
+        "wape": 93.1503007817162,
+        "scale_ratio": 0.07501784986841825
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 934,
+        "mae": 632.5763791702354,
+        "wape": 93.29306427700324,
+        "scale_ratio": 0.07356945780172312
+      },
+      "DINOv2-base, three-domain": {
+        "n": 934,
+        "mae": 226.4879574946467,
+        "wape": 33.40269455560706,
+        "scale_ratio": 0.7366585581365878
+      }
+    },
+    "smartphone / single item": {
+      "n": 441,
+      "median_true_g": 245.0,
+      "Qwen, single prompt": {
+        "n": 441,
+        "mae": 117.12063492063491,
+        "wape": 43.8680142687277,
+        "scale_ratio": 0.73428180086993
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 441,
+        "mae": 231.04210928117917,
+        "wape": 86.53776982588755,
+        "scale_ratio": 0.1467742038947273
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 441,
+        "mae": 233.8156923163265,
+        "wape": 87.57662672965856,
+        "scale_ratio": 0.13714978724894758
+      },
+      "DINOv2-base, three-domain": {
+        "n": 441,
+        "mae": 91.61536487301588,
+        "wape": 34.314910743162905,
+        "scale_ratio": 0.7807485071152537
+      }
+    },
+    "smartphone / several items": {
+      "n": 95,
+      "median_true_g": 114.0,
+      "Qwen, single prompt": {
+        "n": 95,
+        "mae": 159.67789473684212,
+        "wape": 58.68557678172125,
+        "scale_ratio": 1.3705645657385062
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 95,
+        "mae": 233.4280311263158,
+        "wape": 85.7905764993075,
+        "scale_ratio": 0.21049054451199087
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 95,
+        "mae": 234.525289431579,
+        "wape": 86.19384607290145,
+        "scale_ratio": 0.20257665477185108
+      },
+      "DINOv2-base, three-domain": {
+        "n": 95,
+        "mae": 69.83141983157893,
+        "wape": 25.66477443265785,
+        "scale_ratio": 1.2516323966731564
+      }
+    },
+    "lab reference / single item": {
+      "n": 56,
+      "median_true_g": 239.0,
+      "Qwen, single prompt": {
+        "n": 56,
+        "mae": 124.99642857142858,
+        "wape": 47.12717969433785,
+        "scale_ratio": 0.6782088749369864
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 56,
+        "mae": 178.42947242857144,
+        "wape": 67.27294456338787,
+        "scale_ratio": 0.3394773339162721
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 56,
+        "mae": 191.0221703214286,
+        "wape": 72.0207469063489,
+        "scale_ratio": 0.29875296173922383
+      },
+      "DINOv2-base, three-domain": {
+        "n": 56,
+        "mae": 73.68434966071428,
+        "wape": 27.78107844206557,
+        "scale_ratio": 0.8317242662483777
+      }
+    },
+    "lab reference / several items": {
+      "n": 10,
+      "median_true_g": 107.5,
+      "Qwen, single prompt": {
+        "n": 10,
+        "mae": 139.5,
+        "wape": 129.7674418604651,
+        "scale_ratio": 1.9123555638679663
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 10,
+        "mae": 47.87314929999999,
+        "wape": 44.53316213953487,
+        "scale_ratio": 0.5634903473589665
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 10,
+        "mae": 57.960983999999996,
+        "wape": 53.91719441860465,
+        "scale_ratio": 0.4422886357881102
+      },
+      "DINOv2-base, three-domain": {
+        "n": 10,
+        "mae": 25.097323399999997,
+        "wape": 23.346347348837206,
+        "scale_ratio": 1.1389935758781435
+      }
+    },
+    "other / single item": {
+      "n": 36,
+      "median_true_g": 174.0,
+      "Qwen, single prompt": {
+        "n": 36,
+        "mae": 101.92222222222222,
+        "wape": 51.504772599663106,
+        "scale_ratio": 1.200854101181673
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 36,
+        "mae": 169.97271325,
+        "wape": 85.89300501122963,
+        "scale_ratio": 0.1654991001431085
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 36,
+        "mae": 170.48712286111112,
+        "wape": 86.15295371982033,
+        "scale_ratio": 0.15942164673631926
+      },
+      "DINOv2-base, three-domain": {
+        "n": 36,
+        "mae": 28.66800513888889,
+        "wape": 14.486920058955643,
+        "scale_ratio": 0.8445693906686967
+      }
+    },
+    "other / several items": {
+      "n": 4,
+      "median_true_g": 876.0,
+      "Qwen, single prompt": {
+        "n": 4,
+        "mae": 347.25,
+        "wape": 39.64041095890411,
+        "scale_ratio": 0.601535383093349
+      },
+      "DINOv2-base, Nutrition5k only": {
+        "n": 4,
+        "mae": 815.7766125,
+        "wape": 93.12518407534247,
+        "scale_ratio": 0.06813231913417908
+      },
+      "DINOv2-large, multi-domain": {
+        "n": 4,
+        "mae": 822.18482825,
+        "wape": 93.85671555365298,
+        "scale_ratio": 0.061216728917457705
+      },
+      "DINOv2-base, three-domain": {
+        "n": 4,
+        "mae": 71.43004499999998,
+        "wape": 8.154114726027395,
+        "scale_ratio": 0.9405376157736988
+      }
+    }
+  },
+  "fpb_error_model": {
+    "Qwen, single prompt": {
+      "intercept (smartphone, single item, 300 g)": [
+        0.6386335166182548,
+        0.55662471676016,
+        0.7267250470732237
+      ],
+      "lab overhead vs smartphone": [
+        0.9454805245885546,
+        0.7669375450449274,
+        1.1044847267303055
+      ],
+      "lab oblique vs smartphone": [
+        0.8971753666483266,
+        0.7262949135153435,
+        1.0393048281864452
+      ],
+      "several items vs one": [
+        1.5724481918904973,
+        1.3071199687121622,
+        2.0181102057553306
+      ],
+      "per doubling of true mass": [
+        0.6897770847874349,
+        0.6596192462176397,
+        0.7188634073427003
+      ],
+      "n": 1928,
+      "cross_tab_n": {
+        "false": {
+          "lab oblique": 0,
+          "lab overhead": 0,
+          "smartphone": 441
+        },
+        "true": {
+          "lab oblique": 934,
+          "lab overhead": 458,
+          "smartphone": 95
+        }
+      }
+    },
+    "DINOv2-base, Nutrition5k only": {
+      "intercept (smartphone, single item, 300 g)": [
+        0.12361447921363947,
+        0.11167527367447742,
+        0.1363816112707607
+      ],
+      "lab overhead vs smartphone": [
+        3.8661142624401155,
+        3.4920214177591573,
+        4.2882051620168005
+      ],
+      "lab oblique vs smartphone": [
+        0.8168799087278662,
+        0.7485132689524668,
+        0.8920765217501103
+      ],
+      "several items vs one": [
+        1.161344883230911,
+        1.0439396144668882,
+        1.2936679661014627
+      ],
+      "per doubling of true mass": [
+        0.6331916306262801,
+        0.6094346157666125,
+        0.6567708261512805
+      ],
+      "n": 1928,
+      "cross_tab_n": {
+        "false": {
+          "lab oblique": 0,
+          "lab overhead": 0,
+          "smartphone": 441
+        },
+        "true": {
+          "lab oblique": 934,
+          "lab overhead": 458,
+          "smartphone": 95
+        }
+      }
+    },
+    "DINOv2-large, multi-domain": {
+      "intercept (smartphone, single item, 300 g)": [
+        0.11508373935220129,
+        0.10606454106961087,
+        0.1262997393786425
+      ],
+      "lab overhead vs smartphone": [
+        4.438985190975029,
+        3.9060170969945363,
+        4.957672131985491
+      ],
+      "lab oblique vs smartphone": [
+        0.8473565702429631,
+        0.7547729160211156,
+        0.9347639705839683
+      ],
+      "several items vs one": [
+        1.1907101472800279,
+        1.0625417254362048,
+        1.354589964619159
+      ],
+      "per doubling of true mass": [
+        0.6270112641846314,
+        0.6047237082888074,
+        0.6506756799763272
+      ],
+      "n": 1928,
+      "cross_tab_n": {
+        "false": {
+          "lab oblique": 0,
+          "lab overhead": 0,
+          "smartphone": 441
+        },
+        "true": {
+          "lab oblique": 934,
+          "lab overhead": 458,
+          "smartphone": 95
+        }
+      }
+    },
+    "DINOv2-base, three-domain": {
+      "intercept (smartphone, single item, 300 g)": [
+        0.7165274639162943,
+        0.6249476481333006,
+        0.8149070831193959
+      ],
+      "lab overhead vs smartphone": [
+        1.1790997423555567,
+        0.9835899152538945,
+        1.3823180068964087
+      ],
+      "lab oblique vs smartphone": [
+        0.8909332955409859,
+        0.7453762930844814,
+        1.0405227327621847
+      ],
+      "several items vs one": [
+        1.4426779575202622,
+        1.2016571088062247,
+        1.7901539732799638
+      ],
+      "per doubling of true mass": [
+        0.7957912870013293,
+        0.7600507110265591,
+        0.8311405579276641
+      ],
+      "n": 1928,
+      "cross_tab_n": {
+        "false": {
+          "lab oblique": 0,
+          "lab overhead": 0,
+          "smartphone": 441
+        },
+        "true": {
+          "lab oblique": 934,
+          "lab overhead": 458,
+          "smartphone": 95
+        }
+      }
+    }
+  }
+}

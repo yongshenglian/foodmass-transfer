@@ -23,7 +23,7 @@ def main():
     cfg = json.loads((a.run_dir / "config.json").read_text())
     if cfg.get("qwen") == "True" or cfg.get("text_features") == "True":
         raise SystemExit("run uses side inputs; this scorer is for image-only runs")
-    ft.MODEL = cfg["backbone"]; ft.POOL = ThreadPoolExecutor(a.workers)
+    ft.MODEL = cfg["backbone"]; ft.POOL = ThreadPoolExecutor(a.workers); ft.PREPROC = cfg.get("preprocess", "stretch")
     s = pd.read_csv(a.sample); frame = pd.DataFrame({"dish_id": s.dish_id, "image": s.image})
     preds = []
     for f in sorted(a.run_dir.glob("fold*.pt")):
